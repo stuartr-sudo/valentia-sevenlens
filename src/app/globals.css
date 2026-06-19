@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf9f1;
+  --foreground: #283d21;
+  --cream: #faf9f1;
+  --forest: #283d21;
+  --rose: #dcaba3;
+  --rose-deep: #ce897e;
+  --sand: #ddc09b;
+  --sage: #8b9f84;
+  --paper: #ffffff;
+  --line: #e7dcc7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-forest: var(--forest);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-sand: var(--sand);
+  --color-sage: var(--sage);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --font-sans: "Jost", "Jost Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Cormorant Garamond Fallback", Georgia,
+    serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--rose);
+  color: var(--forest);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@keyframes valentia-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.font-display {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.field {
+  min-height: 3rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  padding: 0 1rem;
+  color: var(--forest);
+  outline: none;
+}
+
+.marquee-track {
+  animation: valentia-marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}

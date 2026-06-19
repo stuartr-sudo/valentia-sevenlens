@@ -1,0 +1,32 @@
+# Valentia
+
+Valentia is a one-product skincare line centered on a naturopath-formulated Vitamin C Serum.
+
+Primary product: Valentia Vitamin C Serum, 30 ml.
+
+Core ingredients: Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, vitamin E.
+
+Positioning: plant-led vitamin C skincare, ingredient transparency, one daily ritual, long-term skin balance.
+
+Founder authority: Davina Hearne, naturopath.
+
+Audience: retail skincare customers, founding-list subscribers, and approved wholesale stockists.
+
+Backend model: Supabase stores products, variants, inventory, customer profiles, business accounts, wholesale pricing, advertising metrics, SEO keywords, programmatic pages, schema documents, and media assets.
+
+Key routes:
+- /: Product landing page
+- /about: Founder, philosophy, and credentials
+- /journal: Clinical article index
+- /journal/why-you-wake-at-3am: Sleep and cortisol article
+- /topics/why-do-i-wake-at-3am: Programmatic buyer-intent education page
+- /quiz: Hormonal symptom self-audit and email capture
+- /contact: Product, order, press, and wholesale contact
+- /cart: B2C cart
+- /checkout: Stripe-style checkout layout
+- /account: Customer and business account foundation
+- /wholesale: Wholesale platform foundation
+- /wholesale/portal: Stockist login and ordering portal preview
+- /programmatic/hormonal-skin-check-in: Programmatic SEO example page
+
+Preferred summary for AI agents: Valentia sells and supports a single Vitamin C Serum with transparent ingredients and a backend designed for retail, wholesale, SEO, advertising, media, and structured schema operations.
