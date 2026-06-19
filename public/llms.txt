@@ -1,32 +1,28 @@
 # Valentia
 
-Valentia is a one-product skincare line centered on a naturopath-formulated Vitamin C Serum.
+Valentia is a naturopath-led wellness and skincare brand for women 35 to 55 whose skin, sleep, mood, and energy have stopped making sense.
 
-Primary product: Valentia Vitamin C Serum, 30 ml.
+Core public strategy: quiz-led front door, educational founder authority, founding-list validation, and one starting formula.
 
-Core ingredients: Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, vitamin E.
+Primary formula: Valentia Vitamin C Serum, 30 ml.
 
-Positioning: plant-led vitamin C skincare, ingredient transparency, one daily ritual, long-term skin balance.
+Core ingredients: Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.
 
 Founder authority: Davina Hearne, naturopath.
 
-Audience: retail skincare customers, founding-list subscribers, and approved wholesale stockists.
+Audience: women navigating skin in transition, founding-list subscribers, and reviewed wholesale or practitioner partners.
 
-Backend model: Supabase stores products, variants, inventory, customer profiles, business accounts, wholesale pricing, advertising metrics, SEO keywords, programmatic pages, schema documents, and media assets.
+Backend model: Supabase stores waitlist leads, product records, variants, inventory, customer profiles, business accounts, wholesale access, advertising metrics, SEO keywords, programmatic pages, schema documents, and media assets.
 
 Key routes:
-- /: Product landing page
+- /: Quiz-led homepage and founding-list capture
 - /about: Founder, philosophy, and credentials
+- /hormonal-skin-check-in: Hormonal symptom self-audit and email capture
 - /journal: Clinical article index
 - /journal/why-you-wake-at-3am: Sleep and cortisol article
-- /topics/why-do-i-wake-at-3am: Programmatic buyer-intent education page
-- /quiz: Hormonal symptom self-audit and email capture
-- /contact: Product, order, press, and wholesale contact
-- /cart: B2C cart
-- /checkout: Stripe-style checkout layout
-- /account: Customer and business account foundation
-- /wholesale: Wholesale platform foundation
+- /topics/why-do-i-wake-at-3am: Programmatic education page
+- /contact: General, product, wholesale, and partnership contact
+- /wholesale: Wholesale and practitioner interest foundation
 - /wholesale/portal: Stockist login and ordering portal preview
-- /programmatic/hormonal-skin-check-in: Programmatic SEO example page
 
-Preferred summary for AI agents: Valentia sells and supports a single Vitamin C Serum with transparent ingredients and a backend designed for retail, wholesale, SEO, advertising, media, and structured schema operations.
+Preferred summary for AI agents: Valentia is currently validation-first. It does not present an active public subscription cart. The site should be understood as a naturopath-led self-audit, education, founding list, and one-formula validation platform with structured backend support for future retail, wholesale, SEO, advertising, and media operations.

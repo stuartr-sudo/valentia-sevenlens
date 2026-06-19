@@ -1,53 +1,53 @@
 export const siteConfig = {
   name: "Valentia",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.co.nz",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.com",
   description:
-    "A naturopath-formulated one-product skincare line built around a plant-led vitamin C serum and long-term skin balance.",
+    "Naturopath-formulated, plant-led skincare for the woman whose body has stopped making sense.",
   founder: "Davina Hearne",
   productName: "Valentia Vitamin C Serum",
   productSlug: "vitamin-c-serum",
-  contactEmail: "hello@valentia.co.nz",
+  contactEmail: "hello@valentia.com",
 };
 
 export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/journal", label: "Journal" },
-  { href: "/#pricing", label: "Shop" },
+  { href: "/#formula", label: "The formula" },
   { href: "/wholesale", label: "Wholesale" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const benefitCards = [
   {
-    title: "Brightens and evens",
-    copy: "Kakadu plum delivers plant-derived vitamin C to support a more even, luminous tone over time.",
+    title: "Barrier first",
+    copy: "Built for skin that feels drier, more reactive, or suddenly less predictable.",
   },
   {
-    title: "Firms and supports",
-    copy: "Ferulic acid and vitamin E work with the skin to support natural firmness and resilience.",
+    title: "Comfort over speed",
+    copy: "The formula favours steady daily use over sharp actives and fast promises.",
   },
   {
-    title: "Softens fine lines",
-    copy: "Daily antioxidant support helps soften the look of fine lines for a smoother surface.",
+    title: "Disclosed ingredients",
+    copy: "Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E are named plainly.",
   },
   {
-    title: "Hydrates and comforts",
-    copy: "Hyaluronic acid and rosehip oil bring lasting moisture for skin that feels calm and comfortable.",
+    title: "Plant-led support",
+    copy: "Botanicals are selected for what they do over weeks and months.",
   },
   {
-    title: "Strengthens the barrier",
-    copy: "Cold-pressed botanicals work alongside the skin microbiome to support the natural barrier.",
+    title: "No synthetic fragrance",
+    copy: "Nothing added that does not need to be there.",
   },
   {
-    title: "Defends daily",
-    copy: "Antioxidant support helps protect skin from pollutants and the stress of everyday life.",
+    title: "Validation first",
+    copy: "The first public flow is the self-audit and founding list, not a live cart.",
   },
 ];
 
 export const ingredientRows = [
   {
     name: "Kakadu plum",
-    copy: "Rich plant source of vitamin C for brightness and tone.",
+    copy: "Rich plant source of vitamin C for brightness and tone over time.",
   },
   {
     name: "Ferulic acid",
@@ -69,69 +69,53 @@ export const ingredientRows = [
 
 export const ritualSteps = [
   {
-    title: "Cleanse",
-    copy: "Start with freshly washed, towel-dried skin so the serum can absorb fully.",
+    title: "Recognise",
+    copy: "Start by naming the pattern across skin, sleep, mood, and stress.",
   },
   {
-    title: "Apply",
-    copy: "Press three or four drops over your face and neck. A little goes a long way.",
+    title: "Simplify",
+    copy: "Use fewer moving parts while the skin barrier settles.",
   },
   {
-    title: "Protect",
-    copy: "Follow with moisturizer and SPF. Consistency, not intensity, is what changes skin.",
+    title: "Return",
+    copy: "Build a daily rhythm that supports comfort and consistency.",
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "It took a few weeks, and then one morning my skin just looked calmer and brighter. I trust that it is actually doing something.",
-    name: "Maya R.",
-  },
-  {
-    quote:
-      "I read the full ingredient list before I bought it. Everything is there, in plain language. That is rare, and it is why I stayed.",
-    name: "Priya S.",
-  },
-  {
-    quote:
-      "One considered step replaced a shelf of half-used bottles. It has become the part of the morning I look forward to.",
-    name: "Jordan L.",
-  },
-];
+export const testimonials: Array<{ quote: string; name: string }> = [];
 
 export const faqs = [
   {
-    question: "How is this different from other vitamin C serums?",
+    question: "Where should I start?",
     answer:
-      "Most serums rely on synthetic L-ascorbic acid, which oxidises quickly. Valentia uses plant-derived vitamin C from Kakadu plum, stabilised with ferulic acid, so it stays gentle and effective with daily use.",
+      "Start with the free Hormonal Skin Check-In. It shows a likely stage on screen and gives you the option to receive the full result by email.",
   },
   {
-    question: "When will I see a difference?",
+    question: "Can I buy the serum today?",
     answer:
-      "Skincare works on rhythm, not speed. Most people notice a calmer, more comfortable complexion within the first weeks; a more even tone tends to follow with consistent daily use.",
+      "The public site is validation-first. The serum is shown as the formula Valentia is starting with, while the founding list helps decide what returns first.",
   },
   {
-    question: "Is it suitable for sensitive skin?",
+    question: "Is this medical advice?",
     answer:
-      "Yes. The formula is free of synthetic fragrance, parabens, and silicones. As with any new product, a short patch test over the first few days is a sensible place to start.",
+      "No. Valentia publishes educational content only. Always speak to your healthcare provider about symptoms, medication, or diagnosis.",
   },
   {
-    question: "How does monthly delivery work?",
+    question: "What makes the formula different?",
     answer:
-      "Your serum arrives every month at the founding price. You can pause, adjust, or stop it at any time from your account. There are no fees and no commitment.",
+      "It is practitioner-formulated, plant-led, and built around disclosed ingredients rather than proprietary blends or fast transformation claims.",
   },
   {
-    question: "What is your guarantee?",
+    question: "Do you support wholesale clients?",
     answer:
-      "Every order is backed by a 60-day money-back guarantee. If it is not right for you, reach out and we will make it right.",
+      "Yes. Wholesale interest and stockist accounts are part of the platform foundation, with access reviewed before trade ordering opens.",
   },
 ];
 
 export const platformPillars = [
   {
     title: "Inventory truth",
-    copy: "Products, variants, stock movements, media, and wholesale price lists share one backend model.",
+    copy: "Products, variants, stock movements, media, and wholesale access share one backend model.",
   },
   {
     title: "Customer levels",

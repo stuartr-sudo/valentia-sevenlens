@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Valentia</title>
+<meta name="description" content="Meet Valentia founder Davina Hearne and the practitioner-led philosophy behind the brand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#FAF9F1;--white:#FFFFFF;--forest:#283D21;--olive:#464937;
+  --rose:#DCABA3;--warm-rose:#CE897E;--beige:#DDC09B;--sage:#8B9F84;--terracotta:#9D643F;
+  --maxw:1120px;--display:"Cormorant Garamond",Georgia,serif;--body:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--bone);color:var(--forest);font-family:var(--body);
+  font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.narrow{max-width:760px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:.2px}
+h1{font-size:clamp(2rem,4.8vw,3rem);line-height:1.16}
+h2{font-size:clamp(1.55rem,3.4vw,2.05rem);line-height:1.2}
+h3{font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.25}
+p{margin:0 0 1.1em}
+.eyebrow{font-family:var(--body);font-weight:500;font-size:.78rem;letter-spacing:1.6px;
+  color:var(--sage);text-transform:lowercase;margin:0 0 14px}
+.lead{font-size:1.18rem;line-height:1.65}
+.muted{color:var(--olive)}
+.fine{font-size:.86rem;color:var(--olive)}
+.btn{display:inline-block;font-family:var(--body);font-weight:500;font-size:.95rem;letter-spacing:.3px;
+  padding:14px 26px;border-radius:2px;cursor:pointer;border:1px solid transparent;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;max-width:100%;white-space:normal}
+.btn-primary{background:var(--rose);color:var(--forest)}
+.btn-primary:hover{background:var(--warm-rose);color:var(--white)}
+.btn-secondary{background:transparent;color:var(--forest);border-color:var(--forest)}
+.btn-secondary:hover{background:var(--forest);color:var(--bone)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--warm-rose);outline-offset:3px}
+.topbar{background:var(--forest);color:var(--bone);text-align:center;font-size:.78rem;
+  letter-spacing:.5px;padding:9px 16px}
+.topbar a{color:var(--rose)}
+.site-header{position:sticky;top:0;z-index:30;background:rgba(250,249,241,.92);
+  backdrop-filter:blur(6px);border-bottom:1px solid rgba(40,61,33,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.wordmark{font-family:var(--display);font-size:1.6rem;letter-spacing:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:.86rem;letter-spacing:.4px}
+.nav-links a:not(.btn):hover{color:var(--warm-rose)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.menu-toggle{display:none}
+section{padding:80px 0}
+.section-dark{background:var(--forest);color:var(--bone)}
+.section-dark .eyebrow{color:var(--rose)}
+.section-dark .muted{color:#cdd2c4}
+.img-frame{background:var(--beige);border-radius:3px;overflow:hidden}
+.img-frame img{width:100%;height:100%;object-fit:cover}
+.hero-about{padding:64px 0 20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.belief{padding:18px 0;border-bottom:1px solid rgba(40,61,33,.1)}
+.belief:last-child{border-bottom:none}
+.belief h3{margin-bottom:6px}
+.belief p{margin:0;color:var(--olive);max-width:60ch}
+.quals{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.qual{background:var(--white);border:1px solid rgba(40,61,33,.08);border-radius:3px;padding:26px}
+.qual h3{font-size:1.12rem;margin-bottom:10px}
+.qual p{margin:0;font-size:.94rem;line-height:1.55;color:var(--olive)}
+.founder-note{font-family:var(--display);font-style:italic;font-size:1.3rem;color:var(--warm-rose);margin:8px 0 0}
+.site-footer{background:var(--forest);color:var(--bone);padding:64px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.footer h4{font-family:var(--body);font-weight:500;font-size:.74rem;letter-spacing:1.4px;
+  text-transform:lowercase;color:var(--rose);margin:0 0 16px}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li{margin-bottom:11px}
+.footer a{font-size:.92rem;color:#dfe3d8}
+.footer a:hover{color:var(--rose)}
+.footer-legal{margin-top:46px;padding-top:24px;border-top:1px solid rgba(250,249,241,.16);
+  font-size:.8rem;color:#b9bfb0;line-height:1.6}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:880px){
+  body{width:100vw;max-width:100vw}
+  .topbar,.site-header,section,.site-footer{width:100vw;max-width:100vw;overflow:hidden}
+  section{padding:58px 0}
+  .container{width:100vw;max-width:100vw;padding:0 22px}
+  .topbar{line-height:1.45;white-space:normal;overflow-wrap:break-word}
+  .nav{width:100%;flex-wrap:wrap;gap:14px}
+  .nav-cta{flex-basis:100%;width:100%;justify-content:space-between}
+  .nav-cta .btn{width:calc(100vw - 44px);text-align:center;padding:12px 14px}
+  .lead,.muted,.fine{width:calc(100vw - 44px);max-width:calc(100vw - 44px);overflow-wrap:break-word}
+  .split{grid-template-columns:1fr;gap:30px}
+  .quals{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:var(--bone);padding:20px 28px;gap:18px;border-bottom:1px solid rgba(40,61,33,.1)}
+  .menu-toggle{display:block;background:none;border:none;font-size:.85rem;letter-spacing:.5px;
+    color:var(--forest);cursor:pointer}
+  .site-header .container{position:relative}
+}
+@media (max-width:480px){.footer-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Founding list now open. Members receive the Hormone Reset Guide.</div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="wordmark">Valentia</a>
+      <div class="nav-links" id="navlinks">
+        <a href="/about">About</a>
+        <a href="/#journal">Journal</a>
+        <a href="/#formula">The formula</a>
+        <a href="/#wholesale">Wholesale</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="/hormonal-skin-check-in" class="btn btn-primary">Begin the self-audit</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-about">
+  <div class="container">
+    <div class="narrow reveal">
+      <p class="eyebrow">a practitioner-led wellness brand</p>
+      <h1>For the woman who knows something is off, and has been told she is fine.</h1>
+      <p class="lead muted" style="margin-top:18px">For women 35 to 55. Founded by a naturopath of fifteen years, now in perimenopause herself.</p>
+    </div>
+    <div class="img-frame reveal" style="margin-top:40px;aspect-ratio:16/7">
+      <img src="/valentia/brand/photo-2.jpg" alt="Valentia founder and product story">
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY (reframed from "We believe" into statements) -->
+<section>
+  <div class="container">
+    <div class="narrow">
+      <div class="reveal">
+        <p class="eyebrow">the philosophy</p>
+        <h2>How we work</h2>
+        <p class="lead muted" style="margin:16px 0 36px">The woman who walks into the clinic is the most informed customer the wellness industry has ever had. What she has not been given is the basic respect of being taken seriously.</p>
+      </div>
+      <div class="belief reveal">
+        <h3>The transition is the most under-served stage in women's health</h3>
+        <p>Perimenopause begins years before the final period, and most doctors are trained to recognise the endpoint, not the long transition.</p>
+      </div>
+      <div class="belief reveal">
+        <h3>Clinically meaningful doses, named on the front of the pack</h3>
+        <p>A trace of an expensive ingredient does not earn a place on a label. The dose that matters is the one in the research.</p>
+      </div>
+      <div class="belief reveal">
+        <h3>Patience over promises</h3>
+        <p>Hormonal health takes weeks to shift, not days. The formulas are built for what they do over months.</p>
+      </div>
+      <div class="belief reveal">
+        <h3>The practitioner stays visible</h3>
+        <p>The naturopath who formulated the product is the one teaching you about it. No marketing team in between.</p>
+      </div>
+      <div class="belief reveal">
+        <h3>Saying less, and meaning more</h3>
+        <p>There is enough noise in this category. The brand earns trust by explaining, not by shouting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section-dark">
+  <div class="container">
+    <div class="split">
+      <div class="img-frame reveal" style="aspect-ratio:4/5">
+        <img src="/valentia/brand/founder.jpg" alt="Davina Hearne, Valentia founder">
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">the founder</p>
+        <h2>About Davina</h2>
+        <p class="muted" style="margin-top:16px">I am a naturopath. Fifteen years in practice. Forty-two now, and in perimenopause myself.</p>
+        <p class="muted">The first sign was the sleep. I would fall asleep fine and wake at 3am, every night, wide awake. I cut the wine and the wake-ups continued.</p>
+        <p class="muted">I had every textbook on the subject, and I still walked through it convinced something else was wrong with me. That is how perimenopause works.</p>
+        <p class="founder-note">Small. Practitioner-formulated. Doses you can read on the label.</p>
+        <p class="fine" style="color:#b9bfb0;margin-top:18px">Davina Hearne, Naturopath (Diploma, NZ)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section>
+  <div class="container">
+    <div class="narrow reveal">
+      <p class="eyebrow">the reassurance</p>
+      <h2>Qualifications</h2>
+    </div>
+    <div class="quals">
+      <div class="qual reveal"><h3>Diploma in Naturopathy</h3><p>A three-year qualification covering pathology, biochemistry, nutritional and herbal medicine and clinical practice.</p></div>
+      <div class="qual reveal"><h3>Diploma in Nutrition</h3><p>Clinical nutritional medicine, food-as-medicine frameworks and individual nutritional assessment.</p></div>
+      <div class="qual reveal"><h3>Diploma in Herbal Medicine</h3><p>Materia medica, clinical herbal prescribing and traditional and modern herbal frameworks.</p></div>
+      <div class="qual reveal"><h3>Clinical practice</h3><p>Fifteen years in clinical naturopathic practice, now focused on the perimenopausal transition.</p></div>
+      <div class="qual reveal"><h3>Professional membership</h3><p>Registered with the relevant New Zealand professional body for naturopathic practice.</p></div>
+      <div class="qual reveal"><h3>Compliance</h3><p>Educational content only. Structure and function claims, with clinically meaningful doses disclosed on every product page.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark">
+  <div class="container narrow reveal" style="text-align:center">
+    <p class="eyebrow" style="text-align:center">ready</p>
+    <h2>The quiz is the best place to start</h2>
+    <p class="lead muted" style="margin:16px auto 26px;max-width:46ch">Five minutes. Immediate result. No email required to see your answer.</p>
+    <a href="/hormonal-skin-check-in" class="btn btn-primary">Begin the quiz</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="wordmark">Valentia</span>
+        <p class="muted" style="color:#cdd2c4;max-width:30ch">Wellness built on patience.</p>
+      </div>
+      <div>
+        <h4>explore</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/hormonal-skin-check-in">Quiz</a></li>
+          <li><a href="/#journal">Journal</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>trade</h4>
+        <ul>
+          <li><a href="/#wholesale">Wholesale</a></li>
+          <li><a href="/#portal">Stockist login</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Formulated by Davina Hearne, Naturopath (Diploma, NZ). Educational content only. Always speak to your healthcare provider about your symptoms.<br>2026 Valentia. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t=document.getElementById('menuToggle'),n=document.getElementById('navlinks');
+  if(t){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('in');}); }
+})();
+</script>
+</body>
+</html>

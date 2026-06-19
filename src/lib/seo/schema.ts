@@ -1,7 +1,8 @@
 import { faqs, siteConfig } from "@/lib/site";
 
 export function siteJsonLd() {
-  const productUrl = `${siteConfig.url}/#pricing`;
+  const formulaUrl = `${siteConfig.url}/#formula`;
+  const auditUrl = `${siteConfig.url}/hormonal-skin-check-in`;
 
   return {
     "@context": "https://schema.org",
@@ -12,9 +13,7 @@ export function siteJsonLd() {
         name: siteConfig.name,
         url: siteConfig.url,
         founder: {
-          "@type": "Person",
-          name: siteConfig.founder,
-          jobTitle: "Naturopath and founder",
+          "@id": `${siteConfig.url}/#davina-hearne`,
         },
         brand: {
           "@id": `${siteConfig.url}/#brand`,
@@ -27,19 +26,36 @@ export function siteJsonLd() {
         },
         knowsAbout: [
           "naturopath-formulated skincare",
-          "vitamin C serum",
+          "skin in transition",
+          "perimenopause education",
           "Kakadu plum",
           "ferulic acid",
           "ingredient transparency",
-          "one-product skincare routines",
-          "wholesale skincare distribution",
+          "clinically meaningful doses",
+          "wholesale skincare partnerships",
+        ],
+      },
+      {
+        "@type": "Person",
+        "@id": `${siteConfig.url}/#davina-hearne`,
+        name: siteConfig.founder,
+        jobTitle: "Naturopath and founder",
+        affiliation: {
+          "@id": `${siteConfig.url}/#organization`,
+        },
+        knowsAbout: [
+          "naturopathy",
+          "nutrition",
+          "herbal medicine",
+          "perimenopausal transition",
+          "plant-led skincare formulation",
         ],
       },
       {
         "@type": "Brand",
         "@id": `${siteConfig.url}/#brand`,
         name: siteConfig.name,
-        slogan: "One serum. One ritual.",
+        slogan: "Wellness built on patience.",
       },
       {
         "@type": "WebSite",
@@ -61,34 +77,39 @@ export function siteJsonLd() {
         "@type": "WebPage",
         "@id": `${siteConfig.url}/#webpage`,
         url: siteConfig.url,
-        name: "Valentia Vitamin C Serum",
+        name: "Valentia | Wellness built on patience",
         isPartOf: {
           "@id": `${siteConfig.url}/#website`,
         },
         about: [
           {
+            "@id": `${siteConfig.url}/#brand`,
+          },
+          {
             "@id": `${siteConfig.url}/#product`,
           },
           {
-            "@id": `${siteConfig.url}/#organization`,
+            "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
           },
         ],
-        mainEntity: {
-          "@id": `${siteConfig.url}/#product`,
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${siteConfig.url}/valentia/allisonharp_valentiaseptember-64-mqk5osc8.jpeg`,
         },
         audience: [
           {
             "@type": "Audience",
-            audienceType: "Skincare customers seeking a simple daily serum",
+            audienceType:
+              "Women 35 to 55 exploring skin, sleep, mood, and hormonal transition signals",
           },
           {
             "@type": "BusinessAudience",
-            audienceType: "Wholesale skincare buyers and stockists",
+            audienceType: "Wholesale skincare buyers and practitioner stockists",
           },
         ],
         speakable: {
           "@type": "SpeakableSpecification",
-          cssSelector: ["h1", "#benefits", "#ingredients", "#faq"],
+          cssSelector: ["h1", "#approach", "#formula", "#audit"],
         },
       },
       {
@@ -103,28 +124,40 @@ export function siteJsonLd() {
           `${siteConfig.url}/valentia/brand/product-vitc.png`,
         ],
         description:
-          "A plant-led vitamin C serum formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.",
+          "A plant-led vitamin C serum in validation, formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.",
         category: "Skin care serum",
         sku: "VAL-VITC-30ML",
-        url: productUrl,
-        offers: [
-          {
-            "@type": "Offer",
-            url: productUrl,
-            price: "38.00",
-            priceCurrency: "USD",
-            availability: "https://schema.org/PreOrder",
-            itemCondition: "https://schema.org/NewCondition",
-          },
-          {
-            "@type": "Offer",
-            url: productUrl,
-            price: "32.00",
-            priceCurrency: "USD",
-            availability: "https://schema.org/PreOrder",
-            itemCondition: "https://schema.org/NewCondition",
-            eligibleCustomerType: "subscription customer",
-          },
+        url: formulaUrl,
+        subjectOf: {
+          "@id": `${siteConfig.url}/#webpage`,
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${siteConfig.url}/hormonal-skin-check-in#webpage`,
+        url: auditUrl,
+        name: "Hormonal symptom self-audit",
+        isPartOf: {
+          "@id": `${siteConfig.url}/#website`,
+        },
+        mainEntity: {
+          "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
+        },
+        description:
+          "A free five-minute self-audit from Valentia founder and naturopath Davina Hearne.",
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
+        name: "The Hormonal Skin Check-In",
+        description:
+          "A five-question preview that helps visitors understand whether sleep, mood, skin, stress, and normal lab results may fit a hormonal transition pattern.",
+        about: [
+          "perimenopause education",
+          "skin in transition",
+          "sleep changes",
+          "mood changes",
+          "reactive skin",
         ],
       },
       {
@@ -148,19 +181,25 @@ export function siteJsonLd() {
             "@type": "DefinedTerm",
             name: "Purpose",
             description:
-              "Valentia sells and supports a one-product skincare line centered on a naturopath-formulated vitamin C serum.",
+              "Valentia is a naturopath-led wellness and skincare brand using a self-audit and founding list before broad product launch.",
           },
           {
             "@type": "DefinedTerm",
             name: "Authority",
             description:
-              "The brand emphasizes founder formulation, disclosed ingredients, customer education, and structured product data.",
+              "The brand is led by Davina Hearne, a naturopath, with disclosed ingredients, educational content, and compliance-conscious structure and function language.",
           },
           {
             "@type": "DefinedTerm",
             name: "Commercial model",
             description:
-              "Direct customer sales, founding-list subscriptions, and a wholesale stockist platform share one Supabase-backed data model.",
+              "The public site is validation-first: self-audit, education, founding list, and wholesale interest before live cart or checkout sales.",
+          },
+          {
+            "@type": "DefinedTerm",
+            name: "Backend model",
+            description:
+              "Supabase stores waitlist leads, product and inventory data, business accounts, wholesale access, advertising metrics, SEO data, programmatic page records, schema records, and media metadata.",
           },
         ],
       },

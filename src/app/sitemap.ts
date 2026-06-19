@@ -8,14 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/journal",
     "/journal/why-you-wake-at-3am",
     "/topics/why-do-i-wake-at-3am",
-    "/quiz",
+    "/hormonal-skin-check-in",
     "/contact",
-    "/cart",
-    "/checkout",
-    "/account",
     "/wholesale",
     "/wholesale/portal",
-    "/programmatic/hormonal-skin-check-in",
   ];
   const now = new Date();
 

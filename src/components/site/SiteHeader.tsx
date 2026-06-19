@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [
   { href: "/about", label: "About" },
   { href: "/journal", label: "Journal" },
-  { href: "/#pricing", label: "Shop" },
+  { href: "/#formula", label: "The formula" },
   { href: "/wholesale", label: "Wholesale" },
   { href: "/contact", label: "Contact" },
 ];
@@ -44,18 +44,18 @@ export function SiteHeader({
         </div>
 
         <Link
-          href="/quiz"
+          href="/hormonal-skin-check-in"
           className="hidden min-h-10 shrink-0 items-center rounded bg-rose px-6 text-sm font-medium text-forest transition hover:bg-rose-deep hover:text-white lg:inline-flex"
         >
-          Take the quiz
+          Begin the self-audit
         </Link>
       </nav>
       <div className="border-t border-sand/50 px-5 pb-4 lg:hidden">
         <Link
-          href="/quiz"
+          href="/hormonal-skin-check-in"
           className="inline-flex min-h-10 items-center rounded bg-rose px-4 text-sm font-medium text-forest"
         >
-          Quiz
+          Self-audit
         </Link>
       </div>
     </header>

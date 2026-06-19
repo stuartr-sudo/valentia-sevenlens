@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.co.nz";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.com";
 
 const jost = Jost({
   variable: "--font-jost",
@@ -21,19 +21,19 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Valentia | One Serum. One Ritual.",
+    default: "Valentia | Wellness built on patience",
     template: "%s | Valentia",
   },
   description:
-    "Valentia is a naturopath-formulated one-product skincare line built around a plant-led vitamin C serum, ingredient transparency, and long-term skin balance.",
+    "Naturopath-formulated, plant-led skincare for the woman whose body has stopped making sense. Start with the five-minute self-audit.",
   applicationName: "Valentia",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Valentia | One Serum. One Ritual.",
+    title: "Valentia | Wellness built on patience",
     description:
-      "A plant-led vitamin C serum with Kakadu plum, ferulic acid, and botanical oils.",
+      "Start with the five-minute self-audit for skin in transition.",
     url: "/",
     siteName: "Valentia",
     images: [
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valentia | One Serum. One Ritual.",
+    title: "Valentia | Wellness built on patience",
     description:
-      "A naturopath-formulated vitamin C serum for long-term skin balance.",
+      "Start with the five-minute self-audit for skin in transition.",
     images: ["/valentia/allisonharp_valentiaseptember-64-mqk5osc8.jpeg"],
   },
   robots: {

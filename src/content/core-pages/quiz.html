@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hormonal symptom quiz | Valentia</title>
+<meta name="description" content="A free five-minute self-audit from Valentia founder and naturopath Davina Hearne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#FAF9F1;--white:#FFFFFF;--forest:#283D21;--olive:#464937;
+  --rose:#DCABA3;--warm-rose:#CE897E;--beige:#DDC09B;--sage:#8B9F84;--terracotta:#9D643F;
+  --maxw:1120px;--display:"Cormorant Garamond",Georgia,serif;--body:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--bone);color:var(--forest);font-family:var(--body);
+  font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.narrow{max-width:760px;margin-left:auto;margin-right:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:.2px}
+h1{font-size:clamp(2.1rem,5vw,3.2rem);line-height:1.14}
+h2{font-size:clamp(1.55rem,3.4vw,2.05rem);line-height:1.2}
+h3{font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.25}
+p{margin:0 0 1.1em}
+.eyebrow{font-family:var(--body);font-weight:500;font-size:.78rem;letter-spacing:1.6px;
+  color:var(--sage);text-transform:lowercase;margin:0 0 14px}
+.lead{font-size:1.18rem;line-height:1.65}
+.muted{color:var(--olive)}
+.fine{font-size:.86rem;color:var(--olive)}
+.btn{display:inline-block;font-family:var(--body);font-weight:500;font-size:.95rem;letter-spacing:.3px;
+  padding:14px 26px;border-radius:2px;cursor:pointer;border:1px solid transparent;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;max-width:100%;white-space:normal}
+.btn-primary{background:var(--rose);color:var(--forest)}
+.btn-primary:hover{background:var(--warm-rose);color:var(--white)}
+.btn-secondary{background:transparent;color:var(--forest);border-color:var(--forest)}
+.btn-secondary:hover{background:var(--forest);color:var(--bone)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--warm-rose);outline-offset:3px}
+.topbar{background:var(--forest);color:var(--bone);text-align:center;font-size:.78rem;
+  letter-spacing:.5px;padding:9px 16px}
+.topbar a{color:var(--rose)}
+.site-header{position:sticky;top:0;z-index:30;background:rgba(250,249,241,.92);
+  backdrop-filter:blur(6px);border-bottom:1px solid rgba(40,61,33,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.wordmark{font-family:var(--display);font-size:1.6rem;letter-spacing:1px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:.86rem;letter-spacing:.4px}
+.nav-links a:not(.btn):hover{color:var(--warm-rose)}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.menu-toggle{display:none}
+section{padding:74px 0}
+.section-dark{background:var(--forest);color:var(--bone)}
+.section-dark .eyebrow{color:var(--rose)}
+.section-dark .muted{color:#cdd2c4}
+.hero-quiz{padding:60px 0 24px;text-align:center}
+.hero-quiz .lead{max-width:54ch;margin:18px auto 28px}
+.spoken{max-width:680px;margin:0 auto}
+.spoken .q{font-family:var(--display);font-style:italic;font-size:1.4rem;line-height:1.5;
+  color:var(--warm-rose);padding:14px 0;border-bottom:1px solid rgba(40,61,33,.1)}
+.spoken .q:last-of-type{border-bottom:none}
+.tells{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
+.tell{background:var(--white);border:1px solid rgba(40,61,33,.08);border-radius:3px;padding:28px}
+.tell .num{font-family:var(--display);font-size:1.6rem;color:var(--sage);display:block;margin-bottom:8px}
+.tell h3{margin-bottom:8px}
+.tell p{margin:0;font-size:.96rem;line-height:1.55;color:var(--olive)}
+.audit-box{background:var(--white);border:1px solid rgba(40,61,33,.1);border-radius:3px;
+  padding:36px;max-width:680px;margin:0 auto}
+.qrow{padding:16px 0;border-bottom:1px solid rgba(40,61,33,.08)}
+.qrow:last-of-type{border-bottom:none}
+.qrow p{margin:0 0 10px;font-size:1.02rem}
+.opts{display:flex;gap:10px;flex-wrap:wrap}
+.opt{font-family:var(--body);font-size:.86rem;letter-spacing:.2px;padding:8px 16px;border-radius:2px;
+  border:1px solid var(--beige);background:var(--bone);color:var(--forest);cursor:pointer;
+  transition:background .2s ease,border-color .2s ease,color .2s ease}
+.opt:hover{border-color:var(--sage)}
+.opt[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:var(--white)}
+.opt:focus-visible{outline:2px solid var(--warm-rose);outline-offset:2px}
+.result{margin-top:24px;padding:24px;background:var(--bone);border:1px solid var(--beige);
+  border-radius:3px;display:none}
+.result.show{display:block}
+.result h3{margin-bottom:8px}
+.form-row{display:flex;gap:10px;margin:16px 0 10px}
+.form-row input{flex:1;font-family:var(--body);font-size:1rem;padding:13px 16px;background:var(--white);
+  border:1px solid var(--beige);border-radius:2px;color:var(--forest)}
+.form-row input:focus{outline:2px solid var(--sage);outline-offset:1px}
+.form-row button[disabled]{opacity:.62;cursor:not-allowed}
+.site-footer{background:var(--forest);color:var(--bone);padding:64px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.footer h4{font-family:var(--body);font-weight:500;font-size:.74rem;letter-spacing:1.4px;
+  text-transform:lowercase;color:var(--rose);margin:0 0 16px}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li{margin-bottom:11px}
+.footer a{font-size:.92rem;color:#dfe3d8}
+.footer a:hover{color:var(--rose)}
+.footer-legal{margin-top:46px;padding-top:24px;border-top:1px solid rgba(250,249,241,.16);
+  font-size:.8rem;color:#b9bfb0;line-height:1.6}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:880px){
+  body{width:100vw;max-width:100vw}
+  .topbar,.site-header,section,.site-footer{width:100vw;max-width:100vw;overflow:hidden}
+  section{padding:54px 0}
+  .container{width:100vw;max-width:100vw;padding:0 22px}
+  .topbar{line-height:1.45;white-space:normal;overflow-wrap:break-word}
+  .nav{width:100%;flex-wrap:wrap;gap:14px}
+  .nav-cta{flex-basis:100%;width:100%;justify-content:space-between}
+  .nav-cta .btn{width:calc(100vw - 44px);text-align:center;padding:12px 14px}
+  .lead,.muted,.fine{width:calc(100vw - 44px);max-width:calc(100vw - 44px);overflow-wrap:break-word}
+  .tells{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:var(--bone);padding:20px 28px;gap:18px;border-bottom:1px solid rgba(40,61,33,.1)}
+  .menu-toggle{display:block;background:none;border:none;font-size:.85rem;letter-spacing:.5px;
+    color:var(--forest);cursor:pointer}
+  .site-header .container{position:relative}
+}
+@media (max-width:480px){.footer-grid{grid-template-columns:1fr}.form-row{flex-direction:column}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Founding list now open. Members receive the Hormone Reset Guide.</div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="wordmark">Valentia</a>
+      <div class="nav-links" id="navlinks">
+        <a href="/about">About</a>
+        <a href="/#journal">Journal</a>
+        <a href="/#formula">The formula</a>
+        <a href="/#wholesale">Wholesale</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#audit-form" class="btn btn-primary">Take the quiz</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-quiz">
+  <div class="container reveal">
+    <p class="eyebrow" style="text-align:center">a free five-minute self-audit from a naturopath</p>
+    <h1 class="narrow">Are these symptoms hormonal?</h1>
+    <p class="lead muted">Five minutes. Ten questions. The same diagnostic Davina would give you in clinic, without the $500 consultation.</p>
+    <a href="#audit-form" class="btn btn-primary">Begin the quiz</a>
+    <p class="fine" style="margin-top:14px">Free. About five minutes. No email needed to see your stage.</p>
+  </div>
+</section>
+
+<!-- SPOKEN PHRASES -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="narrow reveal">
+      <p class="eyebrow" style="text-align:center">if you have said any of these out loud</p>
+    </div>
+    <div class="spoken reveal">
+      <p class="q">I went to bed one Tuesday and woke up someone else.</p>
+      <p class="q">I am not depressed. I am hormonal. And no one will listen.</p>
+      <p class="q">I have $300 of capsules in my cupboard I do not take.</p>
+      <p class="q">My GP offered me antidepressants.</p>
+    </div>
+    <p class="narrow muted reveal" style="text-align:center;margin-top:26px">If any of those landed, the audit will name it. Five minutes, and you will know your stage, or that it is not perimenopause and you can look elsewhere.</p>
+  </div>
+</section>
+
+<!-- WHAT IT TELLS YOU -->
+<section class="section-dark">
+  <div class="container">
+    <div class="narrow reveal">
+      <p class="eyebrow" style="text-align:center">what it tells you</p>
+      <h2 style="text-align:center">Three things, in five minutes</h2>
+    </div>
+    <div class="tells">
+      <div class="tell reveal"><span class="num">01</span><h3>Where you are</h3><p>Your likely stage in the perimenopausal transition, or a clear not yet with signals to watch.</p></div>
+      <div class="tell reveal"><span class="num">02</span><h3>What is driving it</h3><p>Your dominant symptom cluster: sleep, brain, mood, body or skin and the hormonal mechanism behind it.</p></div>
+      <div class="tell reveal"><span class="num">03</span><h3>Three things this week</h3><p>Specific, evidence-informed actions tailored to your result.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE AUDIT -->
+<section id="audit-form">
+  <div class="container">
+    <div class="narrow reveal" style="text-align:center;margin-bottom:30px">
+      <p class="eyebrow" style="text-align:center">your result</p>
+      <h2>See your stage on screen. Get the full report by email.</h2>
+      <p class="muted" style="margin-top:14px">Your stage shows immediately. The full personalised result, your dominant cluster and three tailored actions land as a welcome email, followed by Davina's free five-day sleep reset.</p>
+    </div>
+
+    <div class="audit-box reveal">
+      <div class="qrow" data-q>
+        <p>Are you waking between 2am and 4am more than twice a week?</p>
+        <div class="opts"><button class="opt" type="button" aria-pressed="false">Yes</button><button class="opt" type="button" aria-pressed="false">Sometimes</button><button class="opt" type="button" aria-pressed="false">No</button></div>
+      </div>
+      <div class="qrow" data-q>
+        <p>Has your mood changed without an obvious life event?</p>
+        <div class="opts"><button class="opt" type="button" aria-pressed="false">Yes</button><button class="opt" type="button" aria-pressed="false">Sometimes</button><button class="opt" type="button" aria-pressed="false">No</button></div>
+      </div>
+      <div class="qrow" data-q>
+        <p>Has your skin suddenly become drier, reactive or breakout-prone?</p>
+        <div class="opts"><button class="opt" type="button" aria-pressed="false">Yes</button><button class="opt" type="button" aria-pressed="false">A little</button><button class="opt" type="button" aria-pressed="false">No</button></div>
+      </div>
+      <div class="qrow" data-q>
+        <p>Do you feel less tolerant of stress than you did five years ago?</p>
+        <div class="opts"><button class="opt" type="button" aria-pressed="false">Yes</button><button class="opt" type="button" aria-pressed="false">Sometimes</button><button class="opt" type="button" aria-pressed="false">No</button></div>
+      </div>
+      <div class="qrow" data-q>
+        <p>Have you been told your labs are normal while your symptoms are not?</p>
+        <div class="opts"><button class="opt" type="button" aria-pressed="false">Yes</button><button class="opt" type="button" aria-pressed="false">Not sure</button><button class="opt" type="button" aria-pressed="false">No</button></div>
+      </div>
+
+      <button class="btn btn-primary" type="button" id="showResult" style="margin-top:22px">Show my result</button>
+
+      <div class="result" id="result" role="status" aria-live="polite">
+        <h3 id="resultStage">Your stage shows here</h3>
+        <p class="muted" id="resultBody" style="margin:0">Answer the questions above, then see your likely stage on screen. The full personalised result, your dominant cluster and three first steps come by email if you want them.</p>
+        <form class="form-row" data-lead-form data-source="quiz-result">
+          <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required>
+          <button class="btn btn-primary" type="submit">Send me my result</button>
+        </form>
+        <p class="fine" data-lead-message>Two-click unsubscribe. We never share your details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE BUILDER -->
+<section class="section-dark">
+  <div class="container narrow reveal" style="text-align:center">
+    <p class="eyebrow" style="text-align:center">about the person who built this</p>
+    <h2>The framework Davina uses in clinic</h2>
+    <p class="lead muted" style="margin:16px auto 24px;max-width:52ch">Davina is a naturopath of fifteen years, forty-two and in perimenopause herself. The framework in this audit is the one she uses with clients in the first twenty minutes of every initial appointment.</p>
+    <a href="/about" class="btn btn-secondary" style="border-color:rgba(250,249,241,.5);color:var(--bone)">Read Davina's story</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="wordmark">Valentia</span>
+        <p class="muted" style="color:#cdd2c4;max-width:30ch">Wellness built on patience.</p>
+      </div>
+      <div>
+        <h4>explore</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/hormonal-skin-check-in">Quiz</a></li>
+          <li><a href="/#journal">Journal</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>trade</h4>
+        <ul>
+          <li><a href="/#wholesale">Wholesale</a></li>
+          <li><a href="/#portal">Stockist login</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-legal">Formulated by Davina Hearne, Naturopath (Diploma, NZ). Educational content only. Always speak to your healthcare provider about your symptoms.<br>2026 Valentia. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var t=document.getElementById('menuToggle'),n=document.getElementById('navlinks');
+  if(t){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+
+  document.querySelectorAll('[data-lead-form]').forEach(function(form){
+    form.addEventListener('submit',function(event){
+      event.preventDefault();
+      var email=form.querySelector('input[name="email"]');
+      var button=form.querySelector('button[type="submit"]');
+      var message=form.parentElement.querySelector('[data-lead-message]');
+      var original=button.textContent;
+      button.disabled=true;
+      button.textContent='Sending';
+      if(message){message.textContent='Saving your result request.';}
+      fetch('/api/leads',{
+        method:'POST',
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify({email:email.value,source:form.getAttribute('data-source')||'quiz'})
+      }).then(function(response){
+        return response.json().then(function(payload){return {ok:response.ok,payload:payload};});
+      }).then(function(result){
+        if(!result.ok){throw new Error(result.payload.message||'Unable to save this email right now.');}
+        if(message){message.textContent=result.payload.message||'You are on the founding list.';}
+        form.reset();
+      }).catch(function(error){
+        if(message){message.textContent=error.message||'Unable to save this email right now.';}
+      }).finally(function(){
+        button.disabled=false;
+        button.textContent=original;
+      });
+    });
+  });
+
+  // single-select per question
+  document.querySelectorAll('[data-q]').forEach(function(row){
+    row.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        row.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  });
+
+  var stages=[
+    {t:"Watchful peri", b:"Your signals are early or intermittent. This is the stage to learn the pattern before it sharpens. The email result names what to watch and three small steps."},
+    {t:"Early peri", b:"A few systems are starting to shift. Sleep and steadiness are usually the first to move. The full result names your dominant cluster and where to begin."},
+    {t:"Mid peri", b:"The pattern is established across more than one system. This is the most common stage to arrive here. The email result gives your cluster and three first steps."},
+    {t:"Late peri", b:"Several systems are involved and the changes are harder to dismiss. The full result maps your cluster and the order to work through it."}
+  ];
+  document.getElementById('showResult').addEventListener('click',function(){
+    var picked=0;
+    document.querySelectorAll('[data-q]').forEach(function(row){
+      var b=row.querySelector('.opt[aria-pressed="true"]');
+      if(b){var i=Array.prototype.indexOf.call(row.querySelectorAll('.opt'),b); if(i===0)picked+=2; else if(i===1)picked+=1;}
+    });
+    var idx = picked>=8?3 : picked>=5?2 : picked>=2?1 : 0;
+    var s=stages[idx];
+    document.getElementById('resultStage').textContent="Likely stage: "+s.t;
+    document.getElementById('resultBody').textContent=s.b;
+    var r=document.getElementById('result'); r.classList.add('show');
+    r.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  });
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('in');}); }
+})();
+</script>
+</body>
+</html>

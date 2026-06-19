@@ -114,7 +114,7 @@ export default function TopicPage() {
           your stage.
         </p>
         <Link
-          href="/quiz"
+          href="/hormonal-skin-check-in"
           className="mt-8 inline-flex min-h-12 items-center rounded bg-forest px-8 text-sm font-medium text-white"
         >
           Begin the quiz

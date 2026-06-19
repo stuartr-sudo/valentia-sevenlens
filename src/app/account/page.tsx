@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Customer Account",
   description:
-    "Valentia customer account foundation for retail customers, subscriptions, and wholesale-approved buyers.",
+    "Valentia customer account foundation for founding-list members, retail customers, and wholesale-approved buyers.",
   alternates: {
     canonical: "/account",
   },
@@ -16,7 +16,7 @@ const levels = [
   {
     icon: <UserRound className="h-5 w-5" />,
     title: "Retail customer",
-    copy: "Order history, subscription preferences, addresses, quiz results, and support records.",
+    copy: "Founding-list status, order history, addresses, quiz results, and support records.",
   },
   {
     icon: <ShieldCheck className="h-5 w-5" />,

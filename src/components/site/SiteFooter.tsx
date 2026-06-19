@@ -4,7 +4,7 @@ const explore = [
   { href: "/about", label: "About" },
   { href: "/journal", label: "Journal" },
   { href: "/contact", label: "Contact" },
-  { href: "/quiz", label: "Quiz" },
+  { href: "/hormonal-skin-check-in", label: "Quiz" },
 ];
 
 const trade = [
