@@ -6,7 +6,7 @@ export const siteConfig = {
   founder: "Davina Hearne",
   productName: "Valentia Vitamin C Serum",
   productSlug: "vitamin-c-serum",
-  contactEmail: "hello@valentia.com",
+  contactEmail: "hello@valentia.com.au",
 };
 
 export const navLinks = [

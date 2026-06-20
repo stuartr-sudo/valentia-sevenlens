@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { wakeAt3amArticleJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Why You Wake at 3am",
@@ -22,6 +24,7 @@ const steps = [
 export default function ArticlePage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={wakeAt3amArticleJsonLd()} />
       <SiteHeader active="Journal" />
 
       <article>

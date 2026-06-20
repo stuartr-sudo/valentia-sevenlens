@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { LockKeyhole, Minus, Plus } from "lucide-react";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { cartPageJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Cart",
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
 export default function CartPage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={cartPageJsonLd()} />
       <SiteHeader compact />
 
       <section className="mx-auto max-w-6xl px-5 py-14 sm:py-20 lg:px-10">

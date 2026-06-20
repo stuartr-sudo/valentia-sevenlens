@@ -2,6 +2,7 @@
 
 import { ArrowRight, Loader2 } from "lucide-react";
 import { FormEvent, useState } from "react";
+import { trackLeadConversion } from "@/lib/tracking";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -42,6 +43,10 @@ export function FoundingListForm({
 
       setStatus("success");
       setMessage(payload.message || "You are on the founding list.");
+      trackLeadConversion({
+        source,
+        formId: compact ? "compact-founding-list" : "founding-list",
+      });
       form.reset();
     } catch (error) {
       setStatus("error");

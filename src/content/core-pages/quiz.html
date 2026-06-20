@@ -296,6 +296,9 @@ section{padding:74px 0}
         return response.json().then(function(payload){return {ok:response.ok,payload:payload};});
       }).then(function(result){
         if(!result.ok){throw new Error(result.payload.message||'Unable to save this email right now.');}
+        if(window.valentiaTrackLeadConversion){
+          window.valentiaTrackLeadConversion({source:form.getAttribute('data-source')||'quiz-result',formId:'quiz-result'});
+        }
         if(message){message.textContent=result.payload.message||'You are on the founding list.';}
         form.reset();
       }).catch(function(error){

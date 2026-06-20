@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { LockKeyhole } from "lucide-react";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { checkoutPageJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Checkout",
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 export default function CheckoutPage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={checkoutPageJsonLd()} />
       <header className="border-b border-line bg-white px-5 py-5">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           <Link href="/" className="text-lg font-semibold uppercase tracking-[0.22em]">

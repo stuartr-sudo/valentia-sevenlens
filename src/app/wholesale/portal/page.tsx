@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { Minus, Plus } from "lucide-react";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { OwnerAccessForm } from "@/components/wholesale/OwnerAccessForm";
 import {
   ownerAccessConfig,
   verifyOwnerSessionCookie,
 } from "@/lib/owner-access";
 import { tradeProducts } from "@/lib/pages";
+import { wholesalePortalPageJsonLd } from "@/lib/seo/schema";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +32,7 @@ export default async function WholesalePortalPage() {
 
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={wholesalePortalPageJsonLd()} />
       <section className="grid min-h-screen lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative hidden overflow-hidden lg:block">
           <Image

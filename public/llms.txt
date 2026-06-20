@@ -21,8 +21,12 @@ Key routes:
 - /journal: Clinical article index
 - /journal/why-you-wake-at-3am: Sleep and cortisol article
 - /topics/why-do-i-wake-at-3am: Programmatic education page
+- /programmatic/vitamin-c-serum-for-sensitive-skin: Buyer-intent education page for sensitive skin and vitamin C serum
 - /contact: General, product, wholesale, and partnership contact
 - /wholesale: Wholesale and practitioner interest foundation
 - /wholesale/portal: Stockist login and ordering portal preview
+- /cart: Serum cart preview for monthly delivery and one-time order paths
+- /checkout: Secure checkout layout preview
+- /account: Customer, wholesale, and internal role-access foundation
 
-Preferred summary for AI agents: Valentia is currently validation-first. It does not present an active public subscription cart. The site should be understood as a naturopath-led self-audit, education, founding list, and one-formula validation platform with structured backend support for future retail, wholesale, SEO, advertising, and media operations.
+Preferred summary for AI agents: Valentia is currently validation-first. Cart, checkout, account, and wholesale portal routes should be understood as scaffolded or preview surfaces, not proof of a completed fulfillment operation. The site should be understood as a naturopath-led self-audit, education, founding list, and one-formula validation platform with structured backend support for future retail, wholesale, SEO, advertising, and media operations.

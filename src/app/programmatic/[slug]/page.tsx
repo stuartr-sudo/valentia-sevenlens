@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { programmaticPageJsonLd } from "@/lib/seo/schema";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 import { siteConfig } from "@/lib/site";
 
@@ -71,12 +73,15 @@ export default async function ProgrammaticPage({
 
   return (
     <main className="min-h-screen bg-cream text-forest">
-      {page.structured_data ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(page.structured_data) }}
-        />
-      ) : null}
+      <StructuredData
+        data={programmaticPageJsonLd({
+          slug: page.slug,
+          title: page.title,
+          metaDescription: page.meta_description,
+          body: page.body,
+          structuredData: page.structured_data,
+        })}
+      />
 
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24">
         <Link href="/" className="text-sm font-medium text-rose-deep">

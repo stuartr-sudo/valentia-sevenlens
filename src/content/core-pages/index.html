@@ -21,8 +21,12 @@
   body { margin:0; background:#FAF9F1; }
   img { max-width:100%; }
   button, input { font:inherit; }
+  [data-menu-toggle] {
+    display:none;
+  }
   [data-plan-card]:focus-visible,
   [data-faq-toggle]:focus-visible,
+  [data-menu-toggle]:focus-visible,
   a:focus-visible,
   button:focus-visible {
     outline:2px solid #CE897E;
@@ -65,10 +69,11 @@
     .valentia-page { font-size:16px !important; }
     nav[data-screen-label="Nav"] {
       display:grid !important;
-      grid-template-columns:1fr !important;
-      justify-items:center !important;
-      gap:14px !important;
-      padding:16px 22px !important;
+      grid-template-columns:1fr auto !important;
+      align-items:center !important;
+      justify-items:stretch !important;
+      gap:0 !important;
+      padding:18px 24px !important;
     }
     nav[data-screen-label="Nav"] > div {
       flex:0 0 auto !important;
@@ -76,8 +81,78 @@
       justify-content:center !important;
       gap:14px !important;
     }
-    nav[data-screen-label="Nav"] > a[href="#top"] { order:-1 !important; }
+    nav[data-screen-label="Nav"] > a[href="#top"] {
+      order:0 !important;
+      justify-self:start !important;
+    }
     nav[data-screen-label="Nav"] a { font-size:13px !important; }
+    [data-menu-toggle] {
+      appearance:none;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      display:inline-flex;
+      flex-direction:column;
+      gap:5px;
+      height:44px;
+      justify-content:center;
+      justify-self:end;
+      order:1;
+      padding:8px;
+      width:44px;
+    }
+    [data-menu-toggle] span {
+      background:#283D21;
+      display:block;
+      height:2px;
+      transition:transform .16s ease, opacity .16s ease;
+      width:24px;
+    }
+    nav[data-screen-label="Nav"][data-menu-open="true"] [data-menu-toggle] span:nth-child(1) {
+      transform:translateY(7px) rotate(45deg);
+    }
+    nav[data-screen-label="Nav"][data-menu-open="true"] [data-menu-toggle] span:nth-child(2) {
+      opacity:0;
+    }
+    nav[data-screen-label="Nav"][data-menu-open="true"] [data-menu-toggle] span:nth-child(3) {
+      transform:translateY(-7px) rotate(-45deg);
+    }
+    nav[data-screen-label="Nav"] > div[data-nav-group] {
+      align-items:stretch !important;
+      border-top:1px solid #DDC09B;
+      display:none !important;
+      flex-direction:column !important;
+      gap:0 !important;
+      grid-column:1 / -1 !important;
+      justify-content:flex-start !important;
+      margin-top:18px !important;
+      order:2 !important;
+      width:100% !important;
+    }
+    nav[data-screen-label="Nav"] > #site-menu-secondary {
+      border-top:0;
+      margin-top:0 !important;
+      order:3 !important;
+    }
+    nav[data-screen-label="Nav"][data-menu-open="true"] > div[data-nav-group] {
+      display:flex !important;
+    }
+    nav[data-screen-label="Nav"] > div[data-nav-group] a {
+      align-items:center;
+      border-bottom:1px solid rgba(221,192,155,.55);
+      display:flex;
+      justify-content:space-between;
+      min-height:48px;
+      padding:0 !important;
+      width:100%;
+    }
+    nav[data-screen-label="Nav"] > div[data-nav-group] a[href="/quiz"] {
+      border-bottom:0;
+      justify-content:center;
+      margin-top:12px;
+      min-height:52px;
+      padding:0 24px !important;
+    }
     section[data-screen-label="Hero"],
     section[data-screen-label="Pricing"] > div {
       display:grid !important;
@@ -98,7 +173,6 @@
       padding-left:24px !important;
       padding-right:24px !important;
     }
-    section[data-screen-label="USP"] > div,
     section[data-screen-label="Benefits"] > div > div:last-child,
     section[data-screen-label="Ritual"] > div > div:last-child,
     section[data-screen-label="Formulation"] > div > div:last-child,
@@ -107,8 +181,18 @@
       display:grid !important;
       grid-template-columns:1fr !important;
     }
-    section[data-screen-label="USP"] > div { gap:20px !important; }
-    section[data-screen-label="USP"] img { margin:0 auto !important; }
+    section[data-screen-label="USP"] > div {
+      align-items:start !important;
+      display:grid !important;
+      gap:10px !important;
+      grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    }
+    section[data-screen-label="USP"] img {
+      height:clamp(58px,18vw,82px) !important;
+      margin:0 auto !important;
+      object-fit:contain;
+      width:100%;
+    }
     section[data-screen-label="Ingredients"] > div,
     section[data-screen-label="Story"] > div {
       display:grid !important;
@@ -148,7 +232,6 @@
   }
   @media (max-width: 520px) {
     nav[data-screen-label="Nav"] > div { width:100% !important; }
-    nav[data-screen-label="Nav"] > div:first-child a:nth-child(3) { display:none !important; }
     section[data-screen-label="Hero"] h1 { font-size:38px !important; }
     section[data-screen-label="Hero"] div[style*="display:flex; gap:14px"] {
       display:grid !important;
@@ -174,14 +257,19 @@
   </div>
 
   <!-- nav -->
-  <nav data-screen-label="Nav" style="position:sticky; top:0; z-index:50; background:rgba(250,249,241,0.92); backdrop-filter:blur(10px); border-bottom:1px solid #DDC09B; display:flex; align-items:center; justify-content:space-between; padding:18px 44px;">
-    <div style="display:flex; gap:30px; align-items:center; flex:1;">
+  <nav data-screen-label="Nav" data-menu-open="false" style="position:sticky; top:0; z-index:50; background:rgba(250,249,241,0.92); backdrop-filter:blur(10px); border-bottom:1px solid #DDC09B; display:flex; align-items:center; justify-content:space-between; padding:18px 44px;">
+    <div id="site-menu-primary" data-nav-group style="display:flex; gap:30px; align-items:center; flex:1;">
       <a href="/about" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">About</a>
       <a href="/journal" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Journal</a>
       <a href="#ingredients" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Ingredients</a>
     </div>
     <a href="#top" style="flex:0 0 auto; font-family:'Jost',sans-serif; font-weight:500; font-size:20px; letter-spacing:4px; text-transform:uppercase; color:#283D21; text-decoration:none;">Valentia</a>
-    <div style="display:flex; gap:30px; align-items:center; justify-content:flex-end; flex:1;">
+    <button type="button" data-menu-toggle aria-controls="site-menu-primary site-menu-secondary" aria-expanded="false" aria-label="Open menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <div id="site-menu-secondary" data-nav-group style="display:flex; gap:30px; align-items:center; justify-content:flex-end; flex:1;">
       <a href="/wholesale" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Wholesale</a>
       <a href="/contact" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Contact</a>
       <a href="/quiz" style="background:#DCABA3; color:#283D21; font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.3px; text-decoration:none; padding:11px 24px; border-radius:4px;">Take the quiz</a>
@@ -539,6 +627,24 @@
 
 <script>
   (function () {
+    var nav = document.querySelector('[data-screen-label="Nav"]');
+    var menuToggle = document.querySelector("[data-menu-toggle]");
+    if (nav && menuToggle) {
+      menuToggle.addEventListener("click", function () {
+        var willOpen = nav.getAttribute("data-menu-open") !== "true";
+        nav.setAttribute("data-menu-open", willOpen ? "true" : "false");
+        menuToggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+        menuToggle.setAttribute("aria-label", willOpen ? "Close menu" : "Open menu");
+      });
+      nav.querySelectorAll("[data-nav-group] a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          nav.setAttribute("data-menu-open", "false");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open menu");
+        });
+      });
+    }
+
     var activeStyle = "flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #283D21; box-shadow:0 8px 24px -14px rgba(40,61,33,0.4);";
     var inactiveStyle = "flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #e7dcc7; box-shadow:none;";
     var ctaPrice = document.querySelector("[data-cta-price]");

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { tradeProducts, wholesaleBenefits } from "@/lib/pages";
+import { wholesalePageJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Wholesale",
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
 export default function WholesalePage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={wholesalePageJsonLd()} />
       <SiteHeader active="Wholesale" />
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:items-center">

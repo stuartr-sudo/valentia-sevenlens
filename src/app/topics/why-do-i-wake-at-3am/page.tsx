@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { wakeAt3amTopicJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Why Do I Wake at 3am in Perimenopause?",
@@ -21,6 +23,7 @@ const related = [
 export default function TopicPage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={wakeAt3amTopicJsonLd()} />
       <SiteHeader active="Journal" />
 
       <section className="mx-auto max-w-4xl px-5 py-16 sm:py-24">

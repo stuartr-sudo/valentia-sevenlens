@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FoundingListForm } from "@/components/landing/FoundingListForm";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { journalPosts } from "@/lib/pages";
+import { journalPageJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Journal",
@@ -22,6 +24,7 @@ export default function JournalPage() {
 
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={journalPageJsonLd()} />
       <SiteHeader active="Journal" />
 
       <section className="mx-auto max-w-5xl px-5 py-16 text-center sm:py-24">

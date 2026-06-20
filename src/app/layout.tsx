@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost } from "next/font/google";
+import {
+  GoogleTagManagerNoScript,
+  GoogleTracking,
+} from "@/components/analytics/GoogleTracking";
+import { googleTrackingConfig } from "@/lib/google-tracking";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.com";
@@ -58,6 +63,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  ...(googleTrackingConfig.googleSiteVerification
+    ? {
+        verification: {
+          google: googleTrackingConfig.googleSiteVerification,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({
@@ -70,7 +82,11 @@ export default function RootLayout({
       lang="en"
       className={`${jost.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <GoogleTagManagerNoScript />
+        {children}
+        <GoogleTracking />
+      </body>
     </html>
   );
 }

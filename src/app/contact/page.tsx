@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { StructuredData } from "@/components/seo/StructuredData";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { contactPageJsonLd } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -20,6 +22,7 @@ const contacts = [
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={contactPageJsonLd()} />
       <SiteHeader active="Contact" />
 
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">

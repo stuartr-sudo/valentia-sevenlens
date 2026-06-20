@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LockKeyhole, ShieldCheck, UserRound } from "lucide-react";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { accountPageJsonLd } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -33,6 +35,7 @@ const levels = [
 export default function AccountPage() {
   return (
     <main className="min-h-screen bg-cream text-forest">
+      <StructuredData data={accountPageJsonLd()} />
       <section className="mx-auto max-w-5xl px-5 py-16 sm:py-24">
         <Link href="/" className="text-sm font-medium text-rose-deep">
           Back to Valentia
