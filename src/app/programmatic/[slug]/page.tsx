@@ -14,17 +14,17 @@ type PageRecord = {
 };
 
 const fallbackPage: PageRecord = {
-  slug: "hormonal-skin-check-in",
-  title: "The Hormonal Skin Check-In",
+  slug: "vitamin-c-serum-for-sensitive-skin",
+  title: "Vitamin C Serum for Sensitive Skin",
   meta_description:
-    "A Valentia education page for women whose skin has changed suddenly and who want a calm, ingredient-led reset.",
-  hero_kicker: "Programmatic education page",
+    "A Valentia buyer-intent guide for people comparing gentle, ingredient-transparent vitamin C serum options.",
+  hero_kicker: "Programmatic buyer-intent page",
   body:
-    "This route is wired for Supabase-backed programmatic pages. The initial fallback page is included so the route can be previewed locally before the live database is connected.",
+    "This route is wired for Supabase-backed programmatic pages. The initial fallback page previews how Valentia can publish search-focused education around sensitive skin, vitamin C serum, ingredient transparency, and the daily serum ritual before live database content is connected.",
   structured_data: {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "The Hormonal Skin Check-In",
+    headline: "Vitamin C Serum for Sensitive Skin",
     author: {
       "@type": "Organization",
       name: "Valentia",

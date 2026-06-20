@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/journal",
     "/journal/why-you-wake-at-3am",
     "/topics/why-do-i-wake-at-3am",
-    "/hormonal-skin-check-in",
+    "/quiz",
     "/contact",
     "/wholesale",
     "/wholesale/portal",

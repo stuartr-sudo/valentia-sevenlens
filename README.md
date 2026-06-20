@@ -1,16 +1,15 @@
 # Valentia SevenLens
 
-Next.js App Router site for Valentia, a quiz-led wellness and skincare brand centered on the Hormonal Skin Check-In, founding-list validation, and the first Valentia Vitamin C Serum formula.
+Next.js App Router site for Valentia, a practitioner-led wellness and skincare brand centered on the Valentia Vitamin C Serum, quiz/email capture, B2C cart and checkout, and a wholesale stockist platform.
 
 ## What is included
 
-- Quiz-led homepage using the provided Valentia design assets.
+- Designer-file homepage from `Valentia Serum Landing.dc.html`, using the provided Valentia design assets.
 - Added pages from the second design archive: About, Journal, Article, Topic,
   Quiz, Contact, Cart, Checkout, Wholesale, and Stockist Portal.
-- Updated core pages from `files (4).zip`: homepage, About, and Hormonal Skin
-  Check-In.
-- `/cart` and `/checkout` redirect to the founding list while the site remains
-  validation-first.
+- `/quiz` serves the quiz/email-capture funnel, with `/hormonal-skin-check-in`
+  retained only as a redirect.
+- `/cart` and `/checkout` are available for the B2C serum purchase flow.
 - Vercel-ready Next.js 16 app with responsive layouts and optimized images.
 - Supabase helpers for browser, server, and service-role access.
 - Lead capture route at `POST /api/leads`.

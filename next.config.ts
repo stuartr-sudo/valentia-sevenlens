@@ -15,24 +15,14 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/quiz",
-        destination: "/hormonal-skin-check-in",
-        permanent: true,
-      },
-      {
         source: "/quiz.html",
-        destination: "/hormonal-skin-check-in",
+        destination: "/quiz",
         permanent: true,
       },
       {
-        source: "/cart",
-        destination: "/#founding",
-        permanent: false,
-      },
-      {
-        source: "/checkout",
-        destination: "/#founding",
-        permanent: false,
+        source: "/hormonal-skin-check-in",
+        destination: "/quiz",
+        permanent: true,
       },
     ];
   },

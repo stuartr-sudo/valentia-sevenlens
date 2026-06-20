@@ -127,7 +127,7 @@ export default function ArticlePage() {
           in clinic.
         </p>
         <Link
-          href="/hormonal-skin-check-in"
+          href="/quiz"
           className="mt-7 inline-flex min-h-12 items-center rounded bg-forest px-8 text-sm font-medium text-white"
         >
           Begin the quiz

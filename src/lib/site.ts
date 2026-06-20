@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Valentia",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.com",
   description:
-    "Naturopath-formulated, plant-led skincare for the woman whose body has stopped making sense.",
+    "Naturopath-formulated, plant-led skincare centred on the Valentia Vitamin C Serum, ingredient transparency, and long-term skin balance.",
   founder: "Davina Hearne",
   productName: "Valentia Vitamin C Serum",
   productSlug: "vitamin-c-serum",
@@ -39,8 +39,8 @@ export const benefitCards = [
     copy: "Nothing added that does not need to be there.",
   },
   {
-    title: "Validation first",
-    copy: "The first public flow is the self-audit and founding list, not a live cart.",
+    title: "One daily ritual",
+    copy: "A single serum built for consistent morning use, with subscription and one-time purchase paths.",
   },
 ];
 
@@ -86,29 +86,29 @@ export const testimonials: Array<{ quote: string; name: string }> = [];
 
 export const faqs = [
   {
-    question: "Where should I start?",
+    question: "How is this different from other vitamin C serums?",
     answer:
-      "Start with the free Hormonal Skin Check-In. It shows a likely stage on screen and gives you the option to receive the full result by email.",
+      "Most serums rely on synthetic L-ascorbic acid, which oxidises quickly. Valentia uses plant-derived vitamin C from Kakadu plum, stabilised with ferulic acid, so it stays gentle and effective with daily use.",
   },
   {
-    question: "Can I buy the serum today?",
+    question: "When will I see a difference?",
     answer:
-      "The public site is validation-first. The serum is shown as the formula Valentia is starting with, while the founding list helps decide what returns first.",
+      "Skincare works on rhythm, not speed. Most people notice a calmer, more comfortable complexion within the first weeks; a more even tone tends to follow with consistent daily use.",
   },
   {
-    question: "Is this medical advice?",
+    question: "Is it suitable for sensitive skin?",
     answer:
-      "No. Valentia publishes educational content only. Always speak to your healthcare provider about symptoms, medication, or diagnosis.",
+      "Yes. The formula is free of synthetic fragrance, parabens, and silicones. As with any new product, a short patch test over the first few days is a sensible place to start.",
   },
   {
-    question: "What makes the formula different?",
+    question: "How does the monthly delivery work?",
     answer:
-      "It is practitioner-formulated, plant-led, and built around disclosed ingredients rather than proprietary blends or fast transformation claims.",
+      "Your serum arrives every month at the founding price. You can pause, adjust, or stop it at any time from your account. There are no fees and no commitment.",
   },
   {
-    question: "Do you support wholesale clients?",
+    question: "What is your guarantee?",
     answer:
-      "Yes. Wholesale interest and stockist accounts are part of the platform foundation, with access reviewed before trade ordering opens.",
+      "Every order is backed by a 60-day money-back guarantee. If it is not right for you, reach out and we will make it right.",
   },
 ];
 

@@ -44,7 +44,7 @@ export function SiteHeader({
         </div>
 
         <Link
-          href="/hormonal-skin-check-in"
+          href="/quiz"
           className="hidden min-h-10 shrink-0 items-center rounded bg-rose px-6 text-sm font-medium text-forest transition hover:bg-rose-deep hover:text-white lg:inline-flex"
         >
           Begin the self-audit
@@ -52,7 +52,7 @@ export function SiteHeader({
       </nav>
       <div className="border-t border-sand/50 px-5 pb-4 lg:hidden">
         <Link
-          href="/hormonal-skin-check-in"
+          href="/quiz"
           className="inline-flex min-h-10 items-center rounded bg-rose px-4 text-sm font-medium text-forest"
         >
           Self-audit

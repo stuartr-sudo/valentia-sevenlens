@@ -3,494 +3,541 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Valentia | Wellness built on patience</title>
-<meta name="description" content="Naturopath-formulated, plant-led skincare for the woman whose body has stopped making sense. Start with the five-minute self-audit.">
+<title>Valentia Vitamin C Serum | Naturopath-formulated skincare</title>
+<meta name="description" content="A plant-led vitamin C serum formulated by a naturopath around long-term skin balance, Kakadu plum, ferulic acid, and botanical oils.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bone:#FAF9F1; --white:#FFFFFF; --forest:#283D21; --olive:#464937;
-  --rose:#DCABA3; --warm-rose:#CE897E; --beige:#DDC09B; --sage:#8B9F84; --terracotta:#9D643F;
-  --maxw:1120px;
-  --display:"Cormorant Garamond",Georgia,serif;
-  --body:"Jost",system-ui,sans-serif;
-}
-*{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{
-  margin:0;background:var(--bone);color:var(--forest);
-  font-family:var(--body);font-weight:400;font-size:1.0625rem;line-height:1.7;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#FAF9F1; }
+  @keyframes vmarquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  ::selection { background:#DCABA3; color:#283D21; }
+  a { color:inherit; }
+</style>
 
-/* type */
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;letter-spacing:.2px}
-h1{font-size:clamp(2.1rem,5.2vw,3.3rem);line-height:1.14}
-h2{font-size:clamp(1.6rem,3.6vw,2.15rem);line-height:1.2}
-h3{font-size:clamp(1.25rem,2.2vw,1.55rem);line-height:1.25}
-p{margin:0 0 1.1em}
-.eyebrow{font-family:var(--body);font-weight:500;font-size:.78rem;letter-spacing:1.6px;
-  color:var(--sage);text-transform:lowercase;margin:0 0 14px}
-.lead{font-size:1.18rem;line-height:1.65;max-width:48ch}
-.muted{color:var(--olive)}
-.fine{font-size:.86rem;letter-spacing:.2px;color:var(--olive)}
-
-/* buttons */
-.btn{display:inline-block;font-family:var(--body);font-weight:500;font-size:.95rem;
-  letter-spacing:.3px;padding:14px 26px;border-radius:2px;cursor:pointer;border:1px solid transparent;
-  transition:background .25s ease,color .25s ease,border-color .25s ease;max-width:100%;white-space:normal}
-.btn-primary{background:var(--rose);color:var(--forest)}
-.btn-primary:hover{background:var(--warm-rose);color:var(--white)}
-.btn-secondary{background:transparent;color:var(--forest);border-color:var(--forest)}
-.btn-secondary:hover{background:var(--forest);color:var(--bone)}
-.btn-ghost{background:transparent;color:var(--bone);border-color:rgba(250,249,241,.5)}
-.btn-ghost:hover{background:var(--bone);color:var(--forest)}
-.btn:focus-visible{outline:2px solid var(--warm-rose);outline-offset:3px}
-a:focus-visible{outline:2px solid var(--warm-rose);outline-offset:2px}
-
-/* topbar */
-.topbar{background:var(--forest);color:var(--bone);text-align:center;
-  font-family:var(--body);font-size:.78rem;letter-spacing:.5px;padding:9px 16px}
-.topbar a{color:var(--rose);border-bottom:1px solid transparent}
-.topbar a:hover{border-color:var(--rose)}
-
-/* header */
-.site-header{position:sticky;top:0;z-index:30;background:rgba(250,249,241,.92);
-  backdrop-filter:blur(6px);border-bottom:1px solid rgba(40,61,33,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.wordmark{font-family:var(--display);font-size:1.6rem;letter-spacing:1px}
-.nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{font-size:.86rem;letter-spacing:.4px}
-.nav-links a:not(.btn):hover{color:var(--warm-rose)}
-.nav-cta{display:flex;align-items:center;gap:18px}
-.menu-toggle{display:none}
-
-/* sections */
-section{padding:84px 0}
-.section-dark{background:var(--forest);color:var(--bone)}
-.section-dark .eyebrow{color:var(--rose)}
-.section-dark .muted{color:#cdd2c4}
-
-/* hero */
-.hero{padding:60px 0 30px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.hero h1{margin-bottom:22px}
-.hero .lead{margin-bottom:30px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
-.hero-trust{font-size:.9rem;letter-spacing:.3px;color:var(--olive);max-width:42ch}
-.img-frame{background:var(--beige);border-radius:3px;overflow:hidden;aspect-ratio:4/5}
-.img-frame img{width:100%;height:100%;object-fit:cover}
-
-/* voice of customer motif */
-.voc{font-family:var(--display);font-style:italic;font-size:1.35rem;line-height:1.5;
-  color:var(--warm-rose);margin:0 0 6px}
-.voc-answer{max-width:52ch}
-.voc-list{display:grid;gap:26px;margin-top:10px}
-.voc-list .item{border-left:2px solid var(--beige);padding-left:22px}
-
-/* split */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.split.reverse .img-col{order:-1}
-
-/* clusters */
-.clusters{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:46px}
-.cluster{background:var(--white);border:1px solid rgba(40,61,33,.08);border-radius:3px;padding:30px}
-.cluster .tag{font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:1.4px;
-  color:var(--sage);text-transform:lowercase;display:block;margin-bottom:12px}
-.cluster h3{margin-bottom:10px}
-.cluster p{margin:0;font-size:.98rem;line-height:1.6}
-
-/* ingredients */
-.ingredients{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:44px}
-.ingredient h3{font-size:1.15rem;margin-bottom:8px}
-.ingredient p{font-size:.92rem;line-height:1.55;margin:0;color:var(--olive)}
-
-/* in/out */
-.inout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px}
-.inout h3{font-size:1.2rem;margin-bottom:18px}
-.inout ul{list-style:none;margin:0;padding:0}
-.inout li{padding:10px 0;border-bottom:1px solid rgba(250,249,241,.14);font-size:1rem}
-.inout li:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
-  background:var(--rose);margin-right:12px;vertical-align:middle}
-
-/* audit cta */
-.audit{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.audit-card{background:var(--white);border:1px solid rgba(40,61,33,.1);border-radius:3px;padding:34px}
-.audit-card .voc{font-size:1.18rem}
-
-/* founding / email */
-.capture{max-width:520px}
-.form-row{display:flex;gap:10px;margin:18px 0 12px}
-.form-row input{flex:1;font-family:var(--body);font-size:1rem;padding:13px 16px;
-  background:var(--bone);border:1px solid var(--beige);border-radius:2px;color:var(--forest)}
-.form-row input::placeholder{color:#9aa093}
-.form-row input:focus{outline:2px solid var(--sage);outline-offset:1px}
-.form-row button[disabled]{opacity:.62;cursor:not-allowed}
-
-/* pullquote */
-.pullquote{text-align:center;padding:96px 0}
-.pullquote p{font-family:var(--display);font-style:italic;
-  font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.35;color:var(--warm-rose);
-  max-width:20ch;margin:0 auto}
-
-/* footer */
-.site-footer{background:var(--forest);color:var(--bone);padding:70px 0 36px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:40px}
-.footer-brand .wordmark{margin-bottom:10px;display:block}
-.footer h4{font-family:var(--body);font-weight:500;font-size:.74rem;letter-spacing:1.4px;
-  text-transform:lowercase;color:var(--rose);margin:0 0 16px}
-.footer ul{list-style:none;margin:0;padding:0}
-.footer li{margin-bottom:11px}
-.footer a{font-size:.92rem;color:#dfe3d8}
-.footer a:hover{color:var(--rose)}
-.footer-legal{margin-top:48px;padding-top:24px;border-top:1px solid rgba(250,249,241,.16);
-  font-size:.8rem;color:#b9bfb0;line-height:1.6}
-
-.section-head{max-width:60ch}
-.eyebrow-rose{color:var(--rose)}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media (max-width:880px){
-  body{width:100vw;max-width:100vw}
-  .topbar,.site-header,section,.site-footer{width:100vw;max-width:100vw;overflow:hidden}
-  section{padding:60px 0}
-  .container{width:100vw;max-width:100vw;padding:0 22px}
-  .topbar{line-height:1.45;white-space:normal;overflow-wrap:break-word}
-  .nav{width:100%;flex-wrap:wrap;gap:14px}
-  .nav-cta{flex-basis:100%;width:100%;justify-content:space-between}
-  .nav-cta .btn{width:calc(100vw - 44px);text-align:center;padding:12px 14px}
-  .lead,.muted,.hero-trust{width:calc(100vw - 44px);max-width:calc(100vw - 44px);overflow-wrap:break-word}
-  .hero-grid,.split,.audit{grid-template-columns:1fr;gap:34px}
-  .split.reverse .img-col{order:0}
-  .hero .img-frame{aspect-ratio:5/4}
-  .hero-actions{display:grid;grid-template-columns:1fr;gap:12px}
-  .hero-actions .btn{width:calc(100vw - 44px);text-align:center}
-  .clusters{grid-template-columns:1fr}
-  .ingredients{grid-template-columns:1fr 1fr}
-  .inout{grid-template-columns:1fr;gap:30px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
-  .nav-links{display:none}
-  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;
-    background:var(--bone);padding:20px 28px;gap:18px;border-bottom:1px solid rgba(40,61,33,.1)}
-  .menu-toggle{display:block;background:none;border:none;font-family:var(--body);
-    font-size:.85rem;letter-spacing:.5px;color:var(--forest);cursor:pointer}
-  .site-header .container{position:relative}
-}
-@media (max-width:480px){
-  .ingredients{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .form-row{flex-direction:column}
-}
-@media (prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  html{scroll-behavior:auto}
-}
+<style id="valentia-production-overrides">
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:#FAF9F1; }
+  img { max-width:100%; }
+  button, input { font:inherit; }
+  [data-plan-card]:focus-visible,
+  [data-faq-toggle]:focus-visible,
+  a:focus-visible,
+  button:focus-visible {
+    outline:2px solid #CE897E;
+    outline-offset:3px;
+  }
+  @media (max-width: 960px) {
+    .valentia-page { font-size:16px !important; }
+    nav[data-screen-label="Nav"] {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+      justify-items:center !important;
+      gap:14px !important;
+      padding:16px 22px !important;
+    }
+    nav[data-screen-label="Nav"] > div {
+      flex:0 0 auto !important;
+      flex-wrap:wrap !important;
+      justify-content:center !important;
+      gap:14px !important;
+    }
+    nav[data-screen-label="Nav"] > a[href="#top"] { order:-1 !important; }
+    nav[data-screen-label="Nav"] a { font-size:13px !important; }
+    section[data-screen-label="Hero"],
+    section[data-screen-label="Pricing"] > div {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+      gap:36px !important;
+      padding:56px 24px 68px !important;
+    }
+    section[data-screen-label="Hero"] h1 { font-size:44px !important; line-height:1.06 !important; }
+    section[data-screen-label="Hero"] p { font-size:17px !important; }
+    section[data-screen-label="USP"],
+    section[data-screen-label="Benefits"],
+    section[data-screen-label="Ritual"],
+    section[data-screen-label="Formulation"],
+    section[data-screen-label="Reviews"],
+    section[data-screen-label="Pricing"],
+    section[data-screen-label="FAQ"],
+    footer[data-screen-label="Footer"] {
+      padding-left:24px !important;
+      padding-right:24px !important;
+    }
+    section[data-screen-label="USP"] > div,
+    section[data-screen-label="Benefits"] > div > div:last-child,
+    section[data-screen-label="Ritual"] > div > div:last-child,
+    section[data-screen-label="Formulation"] > div > div:last-child,
+    section[data-screen-label="Reviews"] > div > div:last-child,
+    footer[data-screen-label="Footer"] > div > div:first-child {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+    }
+    section[data-screen-label="USP"] > div { gap:20px !important; }
+    section[data-screen-label="USP"] img { margin:0 auto !important; }
+    section[data-screen-label="Ingredients"] > div,
+    section[data-screen-label="Story"] > div {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+    }
+    section[data-screen-label="Ingredients"] > div > div:first-child,
+    section[data-screen-label="Story"] > div > div:first-child {
+      min-height:360px !important;
+    }
+    section[data-screen-label="Ingredients"] > div > div:last-child,
+    section[data-screen-label="Story"] > div > div:last-child {
+      padding:64px 24px !important;
+    }
+    section[data-screen-label="Benefits"] h2,
+    section[data-screen-label="Ritual"] h2,
+    section[data-screen-label="Formulation"] h2,
+    section[data-screen-label="Reviews"] h2,
+    section[data-screen-label="FAQ"] h2 {
+      font-size:38px !important;
+    }
+    section[data-screen-label="Pricing"] > div {
+      max-width:720px !important;
+      margin:0 auto !important;
+    }
+    section[data-screen-label="Pricing"] div[style*="display:flex; gap:14px"] {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+    }
+    footer[data-screen-label="Footer"] input,
+    footer[data-screen-label="Footer"] button {
+      width:100% !important;
+    }
+    footer[data-screen-label="Footer"] div[style*="display:flex; gap:8px"] {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+    }
+  }
+  @media (max-width: 520px) {
+    nav[data-screen-label="Nav"] > div { width:100% !important; }
+    nav[data-screen-label="Nav"] > div:first-child a:nth-child(3) { display:none !important; }
+    section[data-screen-label="Hero"] h1 { font-size:38px !important; }
+    section[data-screen-label="Hero"] div[style*="display:flex; gap:14px"] {
+      display:grid !important;
+      grid-template-columns:1fr !important;
+    }
+    section[data-screen-label="Hero"] a,
+    section[data-screen-label="Pricing"] a {
+      width:100% !important;
+      text-align:center !important;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation:none !important; scroll-behavior:auto !important; transition:none !important; }
+  }
 </style>
 </head>
 <body>
+<div class="valentia-page" style="font-family:'Jost',system-ui,sans-serif; color:#283D21; background:#FAF9F1; overflow-x:hidden; font-size:17px; line-height:1.7;">
 
-<div class="topbar">
-  Founding list now open. Members receive the Hormone Reset Guide.
+  <!-- announcement bar -->
+  <div style="background:#283D21; color:#FAF9F1; text-align:center; padding:11px 16px; font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:1.4px;">
+    Free shipping over $60 &nbsp;·&nbsp; founding-list members receive the Hormone Reset Guide
+  </div>
+
+  <!-- nav -->
+  <nav data-screen-label="Nav" style="position:sticky; top:0; z-index:50; background:rgba(250,249,241,0.92); backdrop-filter:blur(10px); border-bottom:1px solid #DDC09B; display:flex; align-items:center; justify-content:space-between; padding:18px 44px;">
+    <div style="display:flex; gap:30px; align-items:center; flex:1;">
+      <a href="/about" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">About</a>
+      <a href="/journal" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Journal</a>
+      <a href="#ingredients" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Ingredients</a>
+    </div>
+    <a href="#top" style="flex:0 0 auto; font-family:'Jost',sans-serif; font-weight:500; font-size:20px; letter-spacing:4px; text-transform:uppercase; color:#283D21; text-decoration:none;">Valentia</a>
+    <div style="display:flex; gap:30px; align-items:center; justify-content:flex-end; flex:1;">
+      <a href="/wholesale" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Wholesale</a>
+      <a href="/contact" style="font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.4px; color:#283D21; text-decoration:none;">Contact</a>
+      <a href="/quiz" style="background:#DCABA3; color:#283D21; font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.3px; text-decoration:none; padding:11px 24px; border-radius:4px;">Take the quiz</a>
+    </div>
+  </nav>
+
+  <!-- hero -->
+  <section id="top" data-screen-label="Hero" style="display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:48px; padding:80px 44px 90px; max-width:1340px; margin:0 auto;">
+    <div style="max-width:540px;">
+      <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#CE897E; margin-bottom:28px;">Naturopath-formulated skincare</div>
+      <h1 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:72px; line-height:1.04; letter-spacing:0; color:#283D21; margin-bottom:26px;">One serum.<br>One ritual.<br><span style="font-style:italic; color:#CE897E;">Returned to, daily.</span></h1>
+      <p style="font-size:18px; line-height:1.7; color:#283D21; opacity:0.82; max-width:470px; margin-bottom:36px;">A plant-led vitamin C serum formulated around long-term skin balance. Kakadu plum, ferulic acid, and cold-pressed botanical oils; nothing that doesn't need to be there.</p>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:34px;">
+        <div style="color:#CE897E; font-size:16px; letter-spacing:2px;">★★★★★</div>
+        <div style="font-size:14px; color:#283D21; opacity:0.7;">Loved by women who value patience over promises</div>
+      </div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px;">
+        <a href="#pricing" style="background:#DCABA3; color:#283D21; font-family:'Jost',sans-serif; font-weight:500; font-size:15px; letter-spacing:0.3px; text-decoration:none; padding:16px 34px; border-radius:4px;">Shop the serum</a>
+        <a href="#ingredients" style="background:transparent; color:#283D21; border:1px solid #DDC09B; font-family:'Jost',sans-serif; font-weight:500; font-size:15px; letter-spacing:0.3px; text-decoration:none; padding:15px 32px; border-radius:4px;">See what's inside</a>
+      </div>
+      <div style="font-family:'Jost',sans-serif; font-size:13px; letter-spacing:1.2px; text-transform:uppercase; color:#8B9F84;">Cruelty-free · Vegan · Every dose disclosed · 60-day guarantee</div>
+    </div>
+    <div style="position:relative;">
+      <div style="position:absolute; inset:6% 8%; background:radial-gradient(circle at 50% 45%, #DCABA3 0%, #e6cdc6 55%, transparent 72%); border-radius:50%; z-index:0;"></div>
+      <img src="/valentia/allisonharp_valentiaseptember-64-mqk5osc8.jpeg" alt="Valentia Vitamin C Serum" style="position:relative; z-index:1; width:100%; border-radius:6px; box-shadow:0 30px 70px -32px rgba(40,61,33,0.4);">
+    </div>
+  </section>
+
+  <!-- press marquee -->
+  <section style="background:#283D21; color:#FAF9F1; padding:24px 0; overflow:hidden;">
+    <div style="display:flex; width:max-content; animation:vmarquee 30s linear infinite; gap:64px; align-items:center; white-space:nowrap;">
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Allure</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Vogue</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Byrdie</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">mindbodygreen</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">goop</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Refinery29</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Allure</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Vogue</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Byrdie</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">mindbodygreen</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">goop</span>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:26px; opacity:0.8;">Refinery29</span>
+    </div>
+  </section>
+
+  <!-- USP icons -->
+  <section data-screen-label="USP" style="background:#ffffff; padding:56px 44px;">
+    <div style="max-width:1040px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:30px;">
+      <div style="text-align:center;"><img src="/valentia/brand/usp-organic.png" alt="Organic" style="height:92px; object-fit:contain;"></div>
+      <div style="text-align:center;"><img src="/valentia/brand/usp-vegan.png" alt="Vegan" style="height:92px; object-fit:contain;"></div>
+      <div style="text-align:center;"><img src="/valentia/brand/usp-nontoxic.png" alt="Non-toxic" style="height:92px; object-fit:contain;"></div>
+      <div style="text-align:center;"><img src="/valentia/brand/usp-sustainable.png" alt="Sustainable" style="height:92px; object-fit:contain;"></div>
+    </div>
+  </section>
+
+  <!-- benefits -->
+  <section id="benefits" data-screen-label="Benefits" style="background:#FAF9F1; padding:100px 44px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; max-width:680px; margin:0 auto 60px;">
+        <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#CE897E; margin-bottom:20px;">Why one serum is enough</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:50px; line-height:1.1; color:#283D21;">Everything your skin needs,<br>in a single bottle</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">01</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Brightens and evens</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">Kakadu plum delivers stable, plant-derived vitamin C to support a more even, luminous tone over time.</p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">02</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Firms and supports</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">Ferulic acid and vitamin E work with your skin to support its natural firmness and resilience.</p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">03</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Softens fine lines</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">A daily layer of antioxidants helps soften the look of fine lines for a smoother surface.</p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">04</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Hydrates and comforts</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">Hyaluronic acid and rosehip oil bring lasting moisture for skin that feels calm and comfortable.</p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">05</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Strengthens the barrier</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">Cold-pressed botanicals work alongside your skin's microbiome to support its natural barrier.</p>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:8px; padding:40px 34px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:34px; color:#8B9F84; margin-bottom:16px;">06</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:12px;">Defends daily</h3>
+          <p style="font-size:16px; line-height:1.7; color:#283D21; opacity:0.8;">Antioxidant support helps protect skin from the pollutants and stress of everyday life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ingredients -->
+  <section id="ingredients" data-screen-label="Ingredients" style="background:#283D21; color:#FAF9F1;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; align-items:stretch;">
+      <div style="background-image:url('/valentia/brand/vitc-lifestyle1.png'); background-size:cover; background-position:center; min-height:640px;"></div>
+      <div style="padding:100px 60px;">
+        <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#DCABA3; margin-bottom:20px;">What's inside</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:46px; line-height:1.1; margin-bottom:16px;">Botanicals with nothing to hide...</h2>
+        <p style="font-size:16px; line-height:1.7; color:#FAF9F1; opacity:0.78; max-width:440px; margin-bottom:42px;">Every ingredient is real, traceable, and chosen for a reason. No fillers, no synthetic fragrance, no proprietary blends.</p>
+        <div style="display:flex; flex-direction:column; gap:0;">
+          <div style="display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(221,192,155,0.35);">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Kakadu plum</div>
+            <div style="font-size:14px; color:#FAF9F1; opacity:0.75; text-align:right; max-width:240px;">Richest plant source of vitamin C; supports brightness and tone</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(221,192,155,0.35);">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Ferulic acid</div>
+            <div style="font-size:14px; color:#FAF9F1; opacity:0.75; text-align:right; max-width:240px;">Stabilises vitamin C and supports its antioxidant action</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(221,192,155,0.35);">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Rosehip oil</div>
+            <div style="font-size:14px; color:#FAF9F1; opacity:0.75; text-align:right; max-width:240px;">Cold-pressed; restores suppleness and comfort</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(221,192,155,0.35);">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Hyaluronic acid</div>
+            <div style="font-size:14px; color:#FAF9F1; opacity:0.75; text-align:right; max-width:240px;">Holds moisture in the skin for lasting hydration</div>
+          </div>
+          <div style="display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-top:1px solid rgba(221,192,155,0.35); border-bottom:1px solid rgba(221,192,155,0.35);">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:24px;">Vitamin E</div>
+            <div style="font-size:14px; color:#FAF9F1; opacity:0.75; text-align:right; max-width:240px;">Nourishes and supports skin against everyday stress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ritual -->
+  <section data-screen-label="Ritual" style="background:#ffffff; padding:100px 44px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:60px;">
+        <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#CE897E; margin-bottom:20px;">The daily ritual</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:50px; line-height:1.1;">Three drops. Every morning.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 1fr 1fr 1fr; gap:26px; align-items:stretch;">
+        <div style="border-radius:8px; overflow:hidden; min-height:300px; background-image:url('/valentia/brand/photo-3.jpg'); background-size:cover; background-position:center;"></div>
+        <div style="background:#FAF9F1; border-radius:8px; padding:36px 30px; display:flex; flex-direction:column;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:#8B9F84; margin-bottom:18px;">1</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:25px; font-weight:500; margin-bottom:12px;">Cleanse</h3>
+          <p style="font-size:15px; line-height:1.7; color:#283D21; opacity:0.8;">Start with freshly washed, towel-dried skin so the serum can absorb fully.</p>
+        </div>
+        <div style="background:#FAF9F1; border-radius:8px; padding:36px 30px; display:flex; flex-direction:column;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:#8B9F84; margin-bottom:18px;">2</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:25px; font-weight:500; margin-bottom:12px;">Apply</h3>
+          <p style="font-size:15px; line-height:1.7; color:#283D21; opacity:0.8;">Press three or four drops over your face and neck. A little goes a long way.</p>
+        </div>
+        <div style="background:#FAF9F1; border-radius:8px; padding:36px 30px; display:flex; flex-direction:column;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:40px; color:#8B9F84; margin-bottom:18px;">3</div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:25px; font-weight:500; margin-bottom:12px;">Protect</h3>
+          <p style="font-size:15px; line-height:1.7; color:#283D21; opacity:0.8;">Follow with moisturiser and SPF. Consistency, not intensity, is what changes skin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- nothing to hide / formulation -->
+  <section data-screen-label="Formulation" style="background:#FAF9F1; padding:100px 44px;">
+    <div style="max-width:1000px; margin:0 auto;">
+      <div style="text-align:center; max-width:640px; margin:0 auto 56px;">
+        <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#CE897E; margin-bottom:20px;">Nothing to hide</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:48px; line-height:1.1;">Formulated by a naturopath, not a marketing team</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:10px; padding:44px 40px;">
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:24px; color:#283D21;">What goes in</h3>
+          <div style="display:flex; flex-direction:column; gap:15px;">
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21;"><span style="color:#8B9F84;">✓</span> Best bioavailable botanicals</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21;"><span style="color:#8B9F84;">✓</span> Cold-pressed plant oils</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21;"><span style="color:#8B9F84;">✓</span> Concentrations that do the work</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21;"><span style="color:#8B9F84;">✓</span> Recyclable amber glass</div>
+          </div>
+        </div>
+        <div style="background:#ffffff; border:1px solid #e7dcc7; border-radius:10px; padding:44px 40px;">
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:500; margin-bottom:24px; color:#283D21;">What we leave out</h3>
+          <div style="display:flex; flex-direction:column; gap:15px;">
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21; opacity:0.7;"><span style="color:#CE897E;">—</span> Parabens</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21; opacity:0.7;"><span style="color:#CE897E;">—</span> Silicones</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21; opacity:0.7;"><span style="color:#CE897E;">—</span> Synthetic fragrance</div>
+            <div style="display:flex; gap:12px; align-items:flex-start; font-size:16px; color:#283D21; opacity:0.7;"><span style="color:#CE897E;">—</span> Drying alcohols and fillers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- founder / mission -->
+  <section id="story" data-screen-label="Story" style="background:#DDC09B;">
+    <div style="display:grid; grid-template-columns:1fr 1.2fr; align-items:stretch;">
+      <div style="background-image:url('/valentia/brand/founder.jpg'); background-size:cover; background-position:center top; min-height:580px;"></div>
+      <div style="padding:100px 64px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#9D643F; margin-bottom:24px;">From the founder</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:42px; line-height:1.14; color:#283D21; margin-bottom:24px;">Wellness built on patience, not promises.</h2>
+        <p style="font-size:17px; line-height:1.8; color:#283D21; opacity:0.85; max-width:520px; margin-bottom:22px;">Valentia began with a simple belief: what you put on your skin should be as considered as what you put in your body. I formulate around clinical dosing and long-term health, with botanicals chosen for what they do over months, not days.</p>
+        <p style="font-size:17px; line-height:1.8; color:#283D21; opacity:0.85; max-width:520px; margin-bottom:30px;">Every dose is disclosed. Nothing is added that doesn't need to be there.</p>
+        <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:24px; color:#CE897E;">Davina Hearne, Naturopath</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reviews -->
+  <section id="reviews" data-screen-label="Reviews" style="background:#ffffff; padding:100px 44px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:58px;">
+        <div style="color:#CE897E; font-size:18px; letter-spacing:3px; margin-bottom:18px;">★★★★★</div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:48px;">What women tell us</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
+        <div style="background:#FAF9F1; border:1px solid #e7dcc7; border-radius:8px; padding:38px 34px;">
+          <div style="color:#CE897E; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.5; color:#283D21; margin-bottom:26px;">"It took a few weeks, and then one morning my skin just looked calmer and brighter. I trust that it is actually doing something."</p>
+          <div style="font-family:'Jost',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; color:#8B9F84;">Maya R. · Verified buyer</div>
+        </div>
+        <div style="background:#FAF9F1; border:1px solid #e7dcc7; border-radius:8px; padding:38px 34px;">
+          <div style="color:#CE897E; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.5; color:#283D21; margin-bottom:26px;">"I read the full ingredient list before I bought it. Everything is there, in plain language. That is rare, and it is why I stayed."</p>
+          <div style="font-family:'Jost',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; color:#8B9F84;">Priya S. · Verified buyer</div>
+        </div>
+        <div style="background:#FAF9F1; border:1px solid #e7dcc7; border-radius:8px; padding:38px 34px;">
+          <div style="color:#CE897E; letter-spacing:2px; margin-bottom:18px;">★★★★★</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.5; color:#283D21; margin-bottom:26px;">"One considered step replaced a shelf of half-used bottles. It has become the part of the morning I look forward to."</p>
+          <div style="font-family:'Jost',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; color:#8B9F84;">Jordan L. · Verified buyer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pricing -->
+  <section id="pricing" data-screen-label="Pricing" style="background:#FAF9F1; padding:100px 44px;">
+    <div style="max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+      <div style="position:relative;">
+        <div style="position:absolute; inset:8% 10%; background:radial-gradient(circle at 50% 45%, #DCABA3 0%, transparent 70%); border-radius:50%;"></div>
+        <img src="/valentia/6o9a2691-edit-mqk5nl6r.jpg" alt="Valentia Vitamin C Serum" style="position:relative; width:100%; border-radius:6px; box-shadow:0 24px 60px -30px rgba(40,61,33,0.45);">
+      </div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:44px; line-height:1.1; margin-bottom:10px;">Vitamin C Serum</h2>
+        <p style="font-size:15px; color:#283D21; opacity:0.7; margin-bottom:28px;">With Kakadu plum and ferulic acid · 1 fl oz (30 ml)</p>
+
+        <div style="display:flex; gap:14px; margin-bottom:26px;">
+          <button type="button" data-plan-card data-plan="subscribe" aria-pressed="true" style="flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #283D21; box-shadow:0 8px 24px -14px rgba(40,61,33,0.4);">
+            <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.5px; margin-bottom:8px;">Deliver monthly</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:32px;">$32<span style="font-size:15px; font-family:'Jost',sans-serif; color:#283D21; opacity:0.6;">/mo</span></div>
+            <div style="font-size:12px; color:#8B9F84; margin-top:6px;">Founding price · pause or change anytime</div>
+          </button>
+          <button type="button" data-plan-card data-plan="onetime" aria-pressed="false" style="flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #e7dcc7; box-shadow:none;">
+            <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:0.5px; margin-bottom:8px;">One-time</div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:32px;">$38</div>
+            <div style="font-size:12px; color:#283D21; opacity:0.55; margin-top:6px;">A single bottle</div>
+          </button>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+          <div style="display:flex; gap:10px; align-items:center; font-size:15px; color:#283D21; opacity:0.85;"><span style="color:#8B9F84;">✓</span> Free shipping on orders over $60</div>
+          <div style="display:flex; gap:10px; align-items:center; font-size:15px; color:#283D21; opacity:0.85;"><span style="color:#8B9F84;">✓</span> 60-day money-back guarantee</div>
+          <div style="display:flex; gap:10px; align-items:center; font-size:15px; color:#283D21; opacity:0.85;"><span style="color:#8B9F84;">✓</span> Founding-list members receive the Hormone Reset Guide</div>
+        </div>
+
+        <a href="/cart" style="display:block; text-align:center; text-decoration:none; width:100%; background:#DCABA3; color:#283D21; font-family:'Jost',sans-serif; font-weight:500; font-size:16px; letter-spacing:0.3px; padding:18px; border-radius:4px; cursor:pointer;">Add to bag · <span data-cta-price>$32/mo</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section id="faq" data-screen-label="FAQ" style="background:#ffffff; padding:100px 44px;">
+    <div style="max-width:780px; margin:0 auto;">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:48px; text-align:center; margin-bottom:48px;">Questions, answered</h2>
+
+        <div data-faq-item style="border-top:1px solid #e7dcc7; padding:4px 0;">
+          <button type="button" data-faq-toggle aria-expanded="true" style="width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 0; text-align:left;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#283D21;">How is this different from other vitamin C serums?</span>
+            <span data-faq-sign style="font-family:'Jost',sans-serif; font-size:26px; font-weight:300; color:#CE897E; flex:0 0 auto;">–</span>
+          </button>
+          <p data-faq-answer style="font-size:16px; line-height:1.75; color:#283D21; opacity:0.82; padding:0 0 26px; max-width:660px; display:block;">Most serums rely on synthetic L-ascorbic acid, which oxidises quickly. Valentia uses plant-derived vitamin C from Kakadu plum, stabilised with ferulic acid, so it stays gentle and effective with daily use.</p>
+        </div>
+        <div data-faq-item style="border-top:1px solid #e7dcc7; padding:4px 0;">
+          <button type="button" data-faq-toggle aria-expanded="false" style="width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 0; text-align:left;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#283D21;">When will I see a difference?</span>
+            <span data-faq-sign style="font-family:'Jost',sans-serif; font-size:26px; font-weight:300; color:#CE897E; flex:0 0 auto;">+</span>
+          </button>
+          <p data-faq-answer style="font-size:16px; line-height:1.75; color:#283D21; opacity:0.82; padding:0 0 26px; max-width:660px; display:none;">Skincare works on rhythm, not speed. Most people notice a calmer, more comfortable complexion within the first weeks; a more even tone tends to follow with consistent daily use.</p>
+        </div>
+        <div data-faq-item style="border-top:1px solid #e7dcc7; padding:4px 0;">
+          <button type="button" data-faq-toggle aria-expanded="false" style="width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 0; text-align:left;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#283D21;">Is it suitable for sensitive skin?</span>
+            <span data-faq-sign style="font-family:'Jost',sans-serif; font-size:26px; font-weight:300; color:#CE897E; flex:0 0 auto;">+</span>
+          </button>
+          <p data-faq-answer style="font-size:16px; line-height:1.75; color:#283D21; opacity:0.82; padding:0 0 26px; max-width:660px; display:none;">Yes. The formula is free of synthetic fragrance, parabens, and silicones. As with any new product, a short patch test over the first few days is a sensible place to start.</p>
+        </div>
+        <div data-faq-item style="border-top:1px solid #e7dcc7; padding:4px 0;">
+          <button type="button" data-faq-toggle aria-expanded="false" style="width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 0; text-align:left;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#283D21;">How does the monthly delivery work?</span>
+            <span data-faq-sign style="font-family:'Jost',sans-serif; font-size:26px; font-weight:300; color:#CE897E; flex:0 0 auto;">+</span>
+          </button>
+          <p data-faq-answer style="font-size:16px; line-height:1.75; color:#283D21; opacity:0.82; padding:0 0 26px; max-width:660px; display:none;">Your serum arrives every month at the founding price. You can pause, adjust, or stop it at any time from your account. There are no fees and no commitment.</p>
+        </div>
+        <div data-faq-item style="border-top:1px solid #e7dcc7; padding:4px 0;">
+          <button type="button" data-faq-toggle aria-expanded="false" style="width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:24px 0; text-align:left;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:24px; color:#283D21;">What is your guarantee?</span>
+            <span data-faq-sign style="font-family:'Jost',sans-serif; font-size:26px; font-weight:300; color:#CE897E; flex:0 0 auto;">+</span>
+          </button>
+          <p data-faq-answer style="font-size:16px; line-height:1.75; color:#283D21; opacity:0.82; padding:0 0 26px; max-width:660px; display:none;">Every order is backed by a 60-day money-back guarantee. If it is not right for you, reach out and we will make it right.</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer data-screen-label="Footer" style="background:#283D21; color:#FAF9F1; padding:84px 44px 40px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr 1.4fr; gap:40px; padding-bottom:56px; border-bottom:1px solid rgba(221,192,155,0.35);">
+        <div>
+          <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:22px; letter-spacing:5px; text-transform:uppercase; color:#FAF9F1; margin-bottom:20px;">Valentia</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:#DCABA3;">Wellness built on patience.</p>
+        </div>
+        <div>
+          <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:1.4px; text-transform:uppercase; color:#DCABA3; margin-bottom:18px;">Shop</div>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+            <a href="#pricing" style="text-decoration:none; opacity:0.85;">Vitamin C Serum</a>
+            <a href="#pricing" style="text-decoration:none; opacity:0.85;">The Hormone Reset Guide</a>
+            <a href="#pricing" style="text-decoration:none; opacity:0.85;">Founding list</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:1.4px; text-transform:uppercase; color:#DCABA3; margin-bottom:18px;">Learn</div>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:15px;">
+            <a href="#ingredients" style="text-decoration:none; opacity:0.85;">Ingredients</a>
+            <a href="#story" style="text-decoration:none; opacity:0.85;">Our story</a>
+            <a href="#faq" style="text-decoration:none; opacity:0.85;">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Jost',sans-serif; font-weight:500; font-size:13px; letter-spacing:1.4px; text-transform:uppercase; color:#DCABA3; margin-bottom:18px;">Join the founding list</div>
+          <p style="font-size:15px; opacity:0.85; line-height:1.7; margin-bottom:16px;">First access, formulation notes, and exclusive pricing at launch.</p>
+          <div style="display:flex; gap:8px;">
+            <input type="email" placeholder="Your email address" style="flex:1; background:rgba(250,249,241,0.08); border:1px solid rgba(221,192,155,0.4); color:#FAF9F1; padding:13px 14px; border-radius:4px; font-family:'Jost',sans-serif; font-size:14px;">
+            <button style="background:#DCABA3; color:#283D21; border:none; font-family:'Jost',sans-serif; font-weight:500; font-size:14px; letter-spacing:0.3px; padding:0 22px; border-radius:4px; cursor:pointer;">Join</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; padding-top:28px; flex-wrap:wrap; gap:14px;">
+        <div style="font-size:13px; opacity:0.65;">© 2026 Valentia. All rights reserved.</div>
+        <div style="display:flex; gap:24px; font-family:'Jost',sans-serif; font-size:13px; letter-spacing:0.4px; opacity:0.8;">
+          <a href="#" style="text-decoration:none;">Privacy</a>
+          <a href="#" style="text-decoration:none;">Terms</a>
+          <a href="/contact" style="text-decoration:none;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </div>
 
-<header class="site-header">
-  <div class="container">
-    <nav class="nav">
-      <a href="/" class="wordmark">Valentia</a>
-      <div class="nav-links" id="navlinks">
-        <a href="/about">About</a>
-        <a href="#approach">The approach</a>
-        <a href="#formula">The formula</a>
-        <a href="#journal">Journal</a>
-        <a href="#wholesale">Wholesale</a>
-      </div>
-      <div class="nav-cta">
-        <a href="/hormonal-skin-check-in" class="btn btn-primary">Begin the self-audit</a>
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<a id="top"></a>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="reveal">
-        <p class="eyebrow">naturopath-led wellness</p>
-        <h1>Wellness built on patience.</h1>
-        <p class="lead muted">Naturopath-formulated, plant-led skincare for the woman whose body has stopped making sense. Built around return, not transformation.</p>
-        <div class="hero-actions">
-          <a href="/hormonal-skin-check-in" class="btn btn-primary">Begin the self-audit</a>
-          <a href="#founding" class="btn btn-secondary">Join the founding list</a>
-        </div>
-        <p class="hero-trust">Practitioner-formulated. Every dose disclosed. Nothing added that does not need to be there.</p>
-      </div>
-      <div class="reveal">
-        <div class="img-frame">
-          <img src="/valentia/allisonharp_valentiaseptember-64-mqk5osc8.jpeg" alt="Valentia serum held in warm daylight">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHEN YOUR OLD ROUTINE STOPS WORKING -->
-<section id="approach">
-  <div class="container">
-    <div class="split">
-      <div class="reveal">
-        <p class="eyebrow">skin in transition</p>
-        <h2>When your old routine stops working</h2>
-        <p class="lead muted">Skin often changes in the same stage that sleep, mood and energy change. Drier, more reactive, duller or dry and breaking out at the same time.</p>
-        <p class="muted">This is not a failure of discipline. It is a change in the ground your routine was built on. The first step is not panic. It is recognising the pattern.</p>
-        <div class="voc-list">
-          <div class="item">
-            <p class="voc">My old routine stopped working.</p>
-            <p class="muted voc-answer" style="margin:0">Skin in this stage often needs a different starting point: barrier, hydration and consistency before actives.</p>
-          </div>
-          <div class="item">
-            <p class="voc">Everything stings now.</p>
-            <p class="muted voc-answer" style="margin:0">When skin turns reactive, the answer is fewer moving parts, not more. Comfort first.</p>
-          </div>
-        </div>
-      </div>
-      <div class="img-col reveal">
-        <div class="img-frame">
-          <img src="/valentia/brand/vitc-lifestyle1.png" alt="Serum texture and botanical ingredients">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THE WIDER PATTERN -->
-<section class="section-dark">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">the wider picture</p>
-      <h2>Skin is often the change you can see first</h2>
-      <p class="lead muted" style="margin-top:14px">The same transition that shifts your skin is usually moving through sleep, mood and energy too. Valentia exists for the whole pattern, starting with the part you can see in the mirror.</p>
-    </div>
-    <div class="clusters">
-      <div class="cluster reveal">
-        <span class="tag">sleep</span>
-        <h3>The 3am wake</h3>
-        <p>You fall asleep fine, then wake around 3am, wide awake, heart going. A common and under-recognised signal of the transition.</p>
-      </div>
-      <div class="cluster reveal">
-        <span class="tag">mind and mood</span>
-        <h3>Words and steadiness</h3>
-        <p>Reaching for a word that will not come. New anxiety with no prior history. This is a withdrawal of support, not decline.</p>
-      </div>
-      <div class="cluster reveal">
-        <span class="tag">skin and body</span>
-        <h3>Skin that changed</h3>
-        <p>Drier, more reactive or dry and still breaking out. Makeup sitting differently. The products that used to work, quietly stopping.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- THE FORMULA / WHAT IS INSIDE -->
-<section id="formula">
-  <div class="container">
-    <div class="split reverse">
-      <div class="img-col reveal">
-        <div class="img-frame">
-          <img src="/valentia/6o9a2691-edit-mqk5nl6r.jpg" alt="Valentia Vitamin C Serum packaging">
-        </div>
-      </div>
-      <div class="reveal">
-        <p class="eyebrow">the formula we are starting with</p>
-        <h2>Botanicals with nothing to hide</h2>
-        <p class="lead muted">A plant-led vitamin C serum, formulated around comfort and barrier support rather than speed. Every ingredient is real, traceable and chosen for a reason.</p>
-        <div class="ingredients" style="grid-template-columns:1fr 1fr;margin-top:34px">
-          <div class="ingredient"><h3>Kakadu plum</h3><p>A rich plant source of vitamin C, for brightness and tone over time.</p></div>
-          <div class="ingredient"><h3>Ferulic acid</h3><p>Stabilises the vitamin C and supports its antioxidant action.</p></div>
-          <div class="ingredient"><h3>Rosehip oil</h3><p>Cold-pressed, selected for suppleness and comfort.</p></div>
-          <div class="ingredient"><h3>Hyaluronic acid</h3><p>Helps hold moisture in the skin for lasting hydration.</p></div>
-          <div class="ingredient"><h3>Vitamin E</h3><p>Nourishes and supports skin against everyday stress.</p></div>
-          <div class="ingredient"><h3>Nothing else</h3><p>No synthetic fragrance. No proprietary blends. No fillers that do not need to be there.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NOTHING TO HIDE / IN-OUT -->
-<section class="section-dark">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">nothing to hide</p>
-      <h2>Formulated by a naturopath, not a marketing team</h2>
-      <p class="lead muted" style="margin-top:14px">What you put on your skin should be as considered as what you put in your body. Botanicals are chosen for what they do over months, not days.</p>
-    </div>
-    <div class="inout">
-      <div class="reveal">
-        <h3>What goes in</h3>
-        <ul>
-          <li>Best bioavailable botanicals</li>
-          <li>Cold-pressed plant oils</li>
-          <li>Concentrations that do the work</li>
-          <li>Recyclable amber glass</li>
-        </ul>
-      </div>
-      <div class="reveal">
-        <h3>What we leave out</h3>
-        <ul>
-          <li>Synthetic fragrance</li>
-          <li>Parabens and silicones</li>
-          <li>Drying alcohols and fillers</li>
-          <li>Proprietary blends</li>
-        </ul>
-      </div>
-    </div>
-    <p class="fine" style="margin-top:34px;color:#b9bfb0">Davina Hearne, Naturopath (Diploma, NZ)</p>
-  </div>
-</section>
-
-<!-- SELF AUDIT CTA -->
-<section id="audit">
-  <div class="container">
-    <div class="audit">
-      <div class="reveal">
-        <p class="eyebrow">start here</p>
-        <h2>Are these symptoms hormonal?</h2>
-        <p class="lead muted">A five-minute self-audit. Ten questions. The same framework Davina uses in the first twenty minutes of an initial appointment. You see your stage on screen. The full result comes by email if you want it.</p>
-        <div class="hero-actions" style="margin-top:8px">
-          <a href="/hormonal-skin-check-in" class="btn btn-primary">Begin the self-audit</a>
-        </div>
-        <p class="fine">Free. No email needed to see your stage.</p>
-      </div>
-      <div class="audit-card reveal">
-        <p class="voc">I went to bed one Tuesday and woke up someone else.</p>
-        <p class="voc">I am not depressed. I am hormonal. And no one will listen.</p>
-        <p class="voc">I have a cupboard of capsules I do not take.</p>
-        <p class="muted" style="margin:14px 0 0;font-size:.96rem">If any of those landed, the audit will name it. Five minutes, and you will know your stage, or that it is not perimenopause and you can look elsewhere.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PULLQUOTE -->
-<section class="pullquote">
-  <div class="container reveal">
-    <p>The aim is not transformation. It is return.</p>
-  </div>
-</section>
-
-<!-- FOUNDING LIST -->
-<section id="founding" class="section-dark">
-  <div class="container">
-    <div class="split">
-      <div class="reveal">
-        <p class="eyebrow">the founding list</p>
-        <h2>We are bringing the line back one formula at a time</h2>
-        <p class="lead muted" style="margin-top:14px">Not the whole range at once. One or two formulas, chosen carefully, in the doses that matter. Founding-list members help decide what returns first, see the formulation notes and receive launch pricing.</p>
-        <div class="capture">
-          <form class="form-row" data-lead-form data-source="home-founding">
-            <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required>
-            <button class="btn btn-primary" type="submit">Join the founding list</button>
-          </form>
-          <p class="fine" data-lead-message style="color:#b9bfb0">Two-click unsubscribe. We never share your details.</p>
-        </div>
-      </div>
-      <div class="img-col reveal">
-        <div class="img-frame">
-          <img src="/valentia/brand/photo-3.jpg" alt="The morning ritual">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="wordmark">Valentia</span>
-        <p class="muted" style="color:#cdd2c4;max-width:30ch">Wellness built on patience.</p>
-      </div>
-      <div>
-        <h4>explore</h4>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/hormonal-skin-check-in">Quiz</a></li>
-          <li><a href="#journal">Journal</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>trade</h4>
-        <ul>
-          <li><a href="#wholesale">Wholesale</a></li>
-          <li><a href="#portal">Stockist login</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>founding list</h4>
-        <p class="muted" style="color:#cdd2c4;font-size:.9rem;margin-bottom:14px">First access, formulation notes and launch pricing.</p>
-        <a href="#founding" class="btn btn-ghost">Join the list</a>
-      </div>
-    </div>
-    <p class="footer-legal">Formulated by Davina Hearne, Naturopath (Diploma, NZ). Educational content only, with structure and function claims and clinically meaningful doses disclosed on every product page. Always speak to your healthcare provider about your symptoms.<br>2026 Valentia. All rights reserved.</p>
-  </div>
-</footer>
-
 <script>
-(function(){
-  var t=document.getElementById('menuToggle'),n=document.getElementById('navlinks');
-  if(t){t.addEventListener('click',function(){
-    var open=n.classList.toggle('open');
-    t.setAttribute('aria-expanded',open?'true':'false');
-  });}
-  document.querySelectorAll('[data-lead-form]').forEach(function(form){
-    form.addEventListener('submit',function(event){
-      event.preventDefault();
-      var email=form.querySelector('input[name="email"]');
-      var button=form.querySelector('button[type="submit"]');
-      var message=form.parentElement.querySelector('[data-lead-message]');
-      var original=button.textContent;
-      button.disabled=true;
-      button.textContent='Joining';
-      if(message){message.textContent='Saving your place.';}
-      fetch('/api/leads',{
-        method:'POST',
-        headers:{'content-type':'application/json'},
-        body:JSON.stringify({email:email.value,source:form.getAttribute('data-source')||'site'})
-      }).then(function(response){
-        return response.json().then(function(payload){return {ok:response.ok,payload:payload};});
-      }).then(function(result){
-        if(!result.ok){throw new Error(result.payload.message||'Unable to save this email right now.');}
-        if(message){message.textContent=result.payload.message||'You are on the founding list.';}
-        form.reset();
-      }).catch(function(error){
-        if(message){message.textContent=error.message||'Unable to save this email right now.';}
-      }).finally(function(){
-        button.disabled=false;
-        button.textContent=original;
+  (function () {
+    var activeStyle = "flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #283D21; box-shadow:0 8px 24px -14px rgba(40,61,33,0.4);";
+    var inactiveStyle = "flex:1; text-align:left; cursor:pointer; padding:22px 22px; border-radius:8px; background:#ffffff; transition:all .15s; color:#283D21; font-family:'Jost',sans-serif; border:2px solid #e7dcc7; box-shadow:none;";
+    var ctaPrice = document.querySelector("[data-cta-price]");
+    document.querySelectorAll("[data-plan-card]").forEach(function (card) {
+      card.addEventListener("click", function () {
+        var selected = card.getAttribute("data-plan");
+        document.querySelectorAll("[data-plan-card]").forEach(function (item) {
+          var active = item.getAttribute("data-plan") === selected;
+          item.setAttribute("aria-pressed", active ? "true" : "false");
+          item.setAttribute("style", active ? activeStyle : inactiveStyle);
+        });
+        if (ctaPrice) ctaPrice.textContent = selected === "subscribe" ? "$32/mo" : "$38";
       });
     });
-  });
-  var els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-    },{threshold:.12});
-    els.forEach(function(el){io.observe(el);});
-  } else { els.forEach(function(el){el.classList.add('in');}); }
-})();
+
+    document.querySelectorAll("[data-faq-toggle]").forEach(function (toggle) {
+      toggle.addEventListener("click", function () {
+        var item = toggle.closest("[data-faq-item]");
+        var isOpen = toggle.getAttribute("aria-expanded") === "true";
+        document.querySelectorAll("[data-faq-item]").forEach(function (row) {
+          row.querySelector("[data-faq-toggle]").setAttribute("aria-expanded", "false");
+          row.querySelector("[data-faq-sign]").textContent = "+";
+          row.querySelector("[data-faq-answer]").style.display = "none";
+        });
+        if (!isOpen && item) {
+          toggle.setAttribute("aria-expanded", "true");
+          item.querySelector("[data-faq-sign]").textContent = "–";
+          item.querySelector("[data-faq-answer]").style.display = "block";
+        }
+      });
+    });
+  })();
 </script>
 </body>
 </html>

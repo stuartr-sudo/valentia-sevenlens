@@ -10,7 +10,7 @@ type CorePageFile = "index.html" | "about.html" | "quiz.html";
 const pagePaths: Record<CorePageFile, string> = {
   "index.html": "",
   "about.html": "/about",
-  "quiz.html": "/hormonal-skin-check-in",
+  "quiz.html": "/quiz",
 };
 
 const headers = {

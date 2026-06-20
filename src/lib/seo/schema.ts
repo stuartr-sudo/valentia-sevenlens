@@ -1,8 +1,8 @@
 import { faqs, siteConfig } from "@/lib/site";
 
 export function siteJsonLd() {
-  const formulaUrl = `${siteConfig.url}/#formula`;
-  const auditUrl = `${siteConfig.url}/hormonal-skin-check-in`;
+  const pricingUrl = `${siteConfig.url}/#pricing`;
+  const quizUrl = `${siteConfig.url}/quiz`;
 
   return {
     "@context": "https://schema.org",
@@ -26,8 +26,7 @@ export function siteJsonLd() {
         },
         knowsAbout: [
           "naturopath-formulated skincare",
-          "skin in transition",
-          "perimenopause education",
+          "vitamin C serum",
           "Kakadu plum",
           "ferulic acid",
           "ingredient transparency",
@@ -77,7 +76,7 @@ export function siteJsonLd() {
         "@type": "WebPage",
         "@id": `${siteConfig.url}/#webpage`,
         url: siteConfig.url,
-        name: "Valentia | Wellness built on patience",
+        name: "Valentia Vitamin C Serum | Naturopath-formulated skincare",
         isPartOf: {
           "@id": `${siteConfig.url}/#website`,
         },
@@ -89,7 +88,7 @@ export function siteJsonLd() {
             "@id": `${siteConfig.url}/#product`,
           },
           {
-            "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
+            "@id": `${siteConfig.url}/quiz#questionnaire`,
           },
         ],
         primaryImageOfPage: {
@@ -100,7 +99,7 @@ export function siteJsonLd() {
           {
             "@type": "Audience",
             audienceType:
-              "Women 35 to 55 exploring skin, sleep, mood, and hormonal transition signals",
+              "Women 35 to 55 seeking plant-led, ingredient-transparent skincare and a simple daily serum ritual",
           },
           {
             "@type": "BusinessAudience",
@@ -109,7 +108,7 @@ export function siteJsonLd() {
         ],
         speakable: {
           "@type": "SpeakableSpecification",
-          cssSelector: ["h1", "#approach", "#formula", "#audit"],
+          cssSelector: ["h1", "#ingredients", "#pricing", "#faq"],
         },
       },
       {
@@ -124,40 +123,61 @@ export function siteJsonLd() {
           `${siteConfig.url}/valentia/brand/product-vitc.png`,
         ],
         description:
-          "A plant-led vitamin C serum in validation, formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.",
+          "A plant-led vitamin C serum formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.",
         category: "Skin care serum",
         sku: "VAL-VITC-30ML",
-        url: formulaUrl,
+        url: pricingUrl,
+        offers: [
+          {
+            "@type": "Offer",
+            price: "38",
+            priceCurrency: "USD",
+            url: pricingUrl,
+            availability: "https://schema.org/InStock",
+          },
+          {
+            "@type": "Offer",
+            price: "32",
+            priceCurrency: "USD",
+            url: pricingUrl,
+            availability: "https://schema.org/InStock",
+            eligibleQuantity: {
+              "@type": "QuantitativeValue",
+              value: 1,
+              unitText: "monthly serum delivery",
+            },
+          },
+        ],
         subjectOf: {
           "@id": `${siteConfig.url}/#webpage`,
         },
       },
       {
         "@type": "WebPage",
-        "@id": `${siteConfig.url}/hormonal-skin-check-in#webpage`,
-        url: auditUrl,
-        name: "Hormonal symptom self-audit",
+        "@id": `${siteConfig.url}/quiz#webpage`,
+        url: quizUrl,
+        name: "Valentia quiz and email capture",
         isPartOf: {
           "@id": `${siteConfig.url}/#website`,
         },
         mainEntity: {
-          "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
+          "@id": `${siteConfig.url}/quiz#questionnaire`,
         },
         description:
-          "A free five-minute self-audit from Valentia founder and naturopath Davina Hearne.",
+          "A stepped quiz and email capture flow that recommends the Valentia Vitamin C Serum path.",
       },
       {
         "@type": "CreativeWork",
-        "@id": `${siteConfig.url}/hormonal-skin-check-in#questionnaire`,
-        name: "The Hormonal Skin Check-In",
+        "@id": `${siteConfig.url}/quiz#questionnaire`,
+        name: "Valentia skincare quiz",
         description:
-          "A five-question preview that helps visitors understand whether sleep, mood, skin, stress, and normal lab results may fit a hormonal transition pattern.",
+          "A short guided quiz that collects skincare priorities and routes visitors into email capture and the serum recommendation.",
         about: [
-          "perimenopause education",
-          "skin in transition",
-          "sleep changes",
-          "mood changes",
-          "reactive skin",
+          "vitamin C serum",
+          "skin brightness",
+          "ingredient transparency",
+          "sensitive skin",
+          "daily skincare ritual",
         ],
       },
       {
@@ -181,19 +201,19 @@ export function siteJsonLd() {
             "@type": "DefinedTerm",
             name: "Purpose",
             description:
-              "Valentia is a naturopath-led wellness and skincare brand using a self-audit and founding list before broad product launch.",
+              "Valentia is a naturopath-led skincare and wellness brand centred on a single Vitamin C Serum, ingredient transparency, a quiz funnel, and wholesale stockist relationships.",
           },
           {
             "@type": "DefinedTerm",
             name: "Authority",
             description:
-              "The brand is led by Davina Hearne, a naturopath, with disclosed ingredients, educational content, and compliance-conscious structure and function language.",
+              "The brand is led by Davina Hearne, a naturopath, with disclosed ingredients, practitioner-led formulation, educational content, and compliance-conscious skincare language.",
           },
           {
             "@type": "DefinedTerm",
             name: "Commercial model",
             description:
-              "The public site is validation-first: self-audit, education, founding list, and wholesale interest before live cart or checkout sales.",
+              "The public site presents a one-product B2C purchase path with subscription and one-time pricing, plus a separate wholesale application and stockist portal.",
           },
           {
             "@type": "DefinedTerm",
