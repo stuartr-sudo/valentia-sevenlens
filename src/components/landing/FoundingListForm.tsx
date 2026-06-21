@@ -68,7 +68,7 @@ export function FoundingListForm({
             Join the founding list
           </h3>
           <p className="text-sm leading-6 text-forest/70">
-            First access, formulation notes, and exclusive launch pricing.
+            First access, formulation notes and exclusive launch pricing.
           </p>
         </div>
       ) : null}

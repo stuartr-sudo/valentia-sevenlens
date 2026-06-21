@@ -11,13 +11,13 @@ import { journalPageJsonLd } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Clinical writing from Valentia on perimenopausal hormones, sleep, skin, dosing, and daily basics.",
+    "Clinical writing from Valentia on perimenopausal hormones, sleep, skin, dosing and daily basics.",
   alternates: {
     canonical: "/journal",
   },
 };
 
-const filters = ["All", "Sleep and cortisol", "Brain and mood", "The body", "Skin", "Dosing and labels"];
+const filters = ["All", "Sleep and cortisol", "Skin", "Brain and mood", "The body", "Dosing and labels"];
 
 export default function JournalPage() {
   const [featured, ...posts] = journalPosts;
@@ -36,7 +36,7 @@ export default function JournalPage() {
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-forest/74">
           Long-form, evidence-informed notes on perimenopausal hormones, sleep,
-          skin, and the daily basics. No hooks. No urgency. The version Davina
+          skin and the daily basics. No hooks. No urgency. The version Davina
           would give a client.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-2">
@@ -76,7 +76,7 @@ export default function JournalPage() {
               {featured.copy}
             </p>
             <p className="mt-5 text-sm text-forest/55">
-              {featured.readTime}. By Davina Hearne.
+              {featured.readTime}. By Davina Hearne, Naturopath (Diploma, NZ).
             </p>
           </div>
         </Link>
@@ -120,7 +120,7 @@ export default function JournalPage() {
               The weekly note.
             </h2>
             <p className="mt-3 text-base leading-7 text-forest/72">
-              One considered email a week. What Davina is reading, formulating,
+              One considered email a week. What Davina is reading, formulating
               and paying attention to. Unsubscribe in two clicks.
             </p>
           </div>

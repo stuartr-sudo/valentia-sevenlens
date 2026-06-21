@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { FoundingListForm } from "@/components/landing/FoundingListForm";
 
 const explore = [
   { href: "/about", label: "About" },
   { href: "/journal", label: "Journal" },
+  { href: "/#formula", label: "The formula" },
+  { href: "/quiz", label: "Begin the self-audit" },
   { href: "/contact", label: "Contact" },
-  { href: "/quiz", label: "Quiz" },
 ];
 
 const trade = [
@@ -21,7 +23,7 @@ export function SiteFooter({
   return (
     <footer className="bg-forest px-5 py-14 text-cream lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 border-b border-sand/30 pb-10 md:grid-cols-[1.4fr_0.8fr_0.8fr]">
+        <div className="grid gap-10 border-b border-sand/30 pb-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
           <div>
             <p className="text-xl font-semibold uppercase tracking-[0.24em]">
               Valentia
@@ -33,6 +35,17 @@ export function SiteFooter({
 
           <FooterColumn title="Explore" links={explore} />
           <FooterColumn title="Trade" links={trade} />
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-rose">
+              Weekly note
+            </p>
+            <p className="mb-4 text-sm leading-6 text-cream/72">
+              One considered email a week from Davina. Formulation notes,
+              clinical context and the five-day sleep reset for founding-list
+              members.
+            </p>
+            <FoundingListForm source="footer" compact />
+          </div>
         </div>
 
         <p className="pt-6 text-sm leading-7 text-cream/60">

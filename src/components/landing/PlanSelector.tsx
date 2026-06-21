@@ -66,7 +66,8 @@ export function PlanSelector() {
         {[
           "Free shipping on orders over $60",
           "60-day money-back guarantee",
-          "Founding-list members receive the Hormone Reset Guide",
+          "Founding-list members receive the five-day sleep reset",
+          "Cancel online in two clicks. Skip or pause without a call.",
         ].map((item) => (
           <div key={item} className="flex items-center gap-3">
             <Check className="h-4 w-4 shrink-0 text-sage" />

@@ -55,7 +55,7 @@ export function SiteHeader({
           href="/quiz"
           className="inline-flex min-h-10 items-center rounded bg-rose px-4 text-sm font-medium text-forest"
         >
-          Self-audit
+          Begin the self-audit
         </Link>
       </div>
     </header>

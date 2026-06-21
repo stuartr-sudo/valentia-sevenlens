@@ -12,6 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     {
+      route: "/journal/why-your-skin-changed-at-40",
+      priority: 0.75,
+      changeFrequency: "monthly" as const,
+    },
+    {
       route: "/topics/why-do-i-wake-at-3am",
       priority: 0.75,
       changeFrequency: "monthly" as const,
@@ -22,6 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     { route: "/quiz", priority: 0.85, changeFrequency: "monthly" as const },
+    {
+      route: "/hormonal-skin-check-in",
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    },
     { route: "/contact", priority: 0.65, changeFrequency: "monthly" as const },
     { route: "/wholesale", priority: 0.75, changeFrequency: "monthly" as const },
     {

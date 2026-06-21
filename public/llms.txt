@@ -1,14 +1,14 @@
 # Valentia
 
-Valentia is a naturopath-led wellness and skincare brand for women 35 to 55 whose skin, sleep, mood, and energy have stopped making sense.
+Valentia is a naturopath-led wellness and skincare brand for women 35 to 55 whose skin, sleep, mood and energy have stopped making sense.
 
 Core public strategy: quiz-led front door, educational founder authority, founding-list validation, and one starting formula.
 
 Primary formula: Valentia Vitamin C Serum, 30 ml.
 
-Core ingredients: Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.
+Core ingredients: Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil and vitamin E.
 
-Founder authority: Davina Hearne, naturopath.
+Founder authority: Davina Hearne, Naturopath (Diploma, NZ).
 
 Audience: women navigating skin in transition, founding-list subscribers, and reviewed wholesale or practitioner partners.
 
@@ -20,6 +20,7 @@ Key routes:
 - /hormonal-skin-check-in: Hormonal symptom self-audit and email capture
 - /journal: Clinical article index
 - /journal/why-you-wake-at-3am: Sleep and cortisol article
+- /journal/why-your-skin-changed-at-40: Skin in transition article
 - /topics/why-do-i-wake-at-3am: Programmatic education page
 - /programmatic/vitamin-c-serum-for-sensitive-skin: Buyer-intent education page for sensitive skin and vitamin C serum
 - /contact: General, product, wholesale, and partnership contact

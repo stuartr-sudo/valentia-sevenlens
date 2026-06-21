@@ -7,7 +7,7 @@ import { contactPageJsonLd } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Valentia for product questions, order support, wholesale, press, and partnerships.",
+    "Contact Valentia for product questions, order support, wholesale, press and partnerships.",
   alternates: {
     canonical: "/contact",
   },
@@ -96,7 +96,7 @@ export default function ContactPage() {
           to me in the morning. I will be here.
         </blockquote>
         <p className="mt-5 text-sm font-medium uppercase tracking-[0.12em] text-forest/65">
-          Davina Hearne. Naturopath.
+          Davina Hearne, Naturopath (Diploma, NZ).
         </p>
       </section>
 

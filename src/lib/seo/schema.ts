@@ -32,6 +32,10 @@ type ProgrammaticSchemaInput = {
   structuredData?: Record<string, unknown> | null;
 };
 
+type CorePageSchemaOptions = {
+  path?: string;
+};
+
 const baseUrl = siteConfig.url.replace(/\/$/, "");
 const organizationId = `${baseUrl}/#organization`;
 const founderId = `${baseUrl}/#davina-hearne`;
@@ -65,25 +69,27 @@ export function siteJsonLd() {
   return homePageJsonLd();
 }
 
-export function corePageJsonLd(fileName: "index.html" | "about.html" | "quiz.html") {
+export function corePageJsonLd(
+  fileName: "index.html" | "about.html" | "quiz.html",
+  options: CorePageSchemaOptions = {},
+) {
   switch (fileName) {
     case "about.html":
-      return aboutPageJsonLd();
+      return aboutPageJsonLd(options.path);
     case "quiz.html":
-      return quizPageJsonLd();
+      return quizPageJsonLd(options.path);
     case "index.html":
     default:
-      return homePageJsonLd();
+      return homePageJsonLd(options.path);
   }
 }
 
-export function homePageJsonLd() {
-  const path = "/";
+export function homePageJsonLd(path = "/") {
   const page = webPageNode({
     path,
-    name: "Valentia Vitamin C Serum | Naturopath-formulated skincare",
+    name: "Valentia | Plant-led skincare for skin in transition",
     description:
-      "A plant-led vitamin C serum formulated by a naturopath around long-term skin balance, Kakadu plum, ferulic acid, and botanical oils.",
+      "Naturopath-formulated, plant-led skincare for hormonally changing skin. For the woman whose old routine stopped working. Start with the five-minute self-audit.",
     image: "/valentia/allisonharp_valentiaseptember-64-mqk5osc8.jpeg",
     mainEntity: { "@id": productId },
     about: [
@@ -95,7 +101,7 @@ export function homePageJsonLd() {
     ],
     audience: [
       audienceNode(
-        "Women 35 to 55 seeking plant-led, ingredient-transparent skincare and a simple daily serum ritual",
+        "Women 35 to 55 seeking plant-led, ingredient-transparent skincare and a clear self-audit first step",
       ),
       {
         "@type": "BusinessAudience",
@@ -111,8 +117,7 @@ export function homePageJsonLd() {
   ]);
 }
 
-export function aboutPageJsonLd() {
-  const path = "/about";
+export function aboutPageJsonLd(path = "/about") {
   const page = webPageNode({
     path,
     type: "AboutPage",
@@ -142,8 +147,7 @@ export function aboutPageJsonLd() {
   );
 }
 
-export function quizPageJsonLd() {
-  const path = "/quiz";
+export function quizPageJsonLd(path = "/quiz") {
   const questionnaireId = `${absoluteUrl(path)}#self-audit`;
   const page = webPageNode({
     path,
@@ -155,7 +159,7 @@ export function quizPageJsonLd() {
       "perimenopause self-audit",
       "hormonal skin changes",
       "sleep disruption",
-      "skin reset plan",
+      "skin in transition",
     ],
   });
 
@@ -170,7 +174,7 @@ export function quizPageJsonLd() {
       "@id": questionnaireId,
       name: "Valentia hormonal symptom self-audit",
       description:
-        "A five-minute educational self-audit that helps visitors identify symptom clusters across skin, sleep, mood, body, and stress before joining the Valentia founding list.",
+        "A five-minute educational self-audit that helps visitors identify symptom clusters across skin, sleep, mood, body and stress before joining the Valentia founding list.",
       creator: { "@id": founderId },
       publisher: { "@id": organizationId },
       inLanguage: "en-NZ",
@@ -198,7 +202,7 @@ export function contactPageJsonLd() {
       type: "ContactPage",
       name: "Contact Valentia",
       description:
-        "Contact Valentia for product questions, order support, wholesale, press, and partnerships.",
+        "Contact Valentia for product questions, order support, wholesale, press and partnerships.",
       mainEntity: { "@id": organizationId },
     }),
   ]);
@@ -217,12 +221,12 @@ export function wholesalePageJsonLd() {
       path,
       name: "Valentia Wholesale",
       description:
-        "Wholesale and practitioner partnerships for Valentia stockists, clinics, pharmacies, and considered retailers.",
+        "Wholesale and practitioner partnerships for Valentia stockists, clinics, pharmacies and considered retailers.",
       image: "/valentia/brand/packaging.png",
       mainEntity: { "@id": serviceId },
       audience: {
         "@type": "BusinessAudience",
-        audienceType: "Clinics, pharmacies, considered retailers, and practitioner stockists",
+        audienceType: "Clinics, pharmacies, considered retailers and practitioner stockists",
       },
     }),
     {
@@ -230,7 +234,7 @@ export function wholesalePageJsonLd() {
       "@id": serviceId,
       name: "Valentia wholesale and practitioner partnerships",
       description:
-        "Reviewed wholesale access for practitioners, clinics, pharmacies, and considered retailers that want to stock Valentia products.",
+        "Reviewed wholesale access for practitioners, clinics, pharmacies and considered retailers that want to stock Valentia products.",
       provider: { "@id": organizationId },
       serviceType: "Wholesale skincare stockist partnership",
       areaServed: ["NZ", "AU"],
@@ -301,7 +305,7 @@ export function journalPageJsonLd() {
       type: "CollectionPage",
       name: "Valentia Journal",
       description:
-        "Clinical writing from Valentia on perimenopausal hormones, sleep, skin, dosing, and daily basics.",
+        "Clinical writing from Valentia on perimenopausal hormones, sleep, skin, dosing and daily basics.",
       image: "/valentia/brand/photo-2.jpg",
       mainEntity: { "@id": listId },
       about: ["perimenopause", "sleep and cortisol", "skin in transition", "clinical dosing"],
@@ -321,8 +325,8 @@ export function journalPageJsonLd() {
         {
           "@type": "ListItem",
           position: 2,
-          url: absoluteUrl("/topics/why-do-i-wake-at-3am"),
-          name: "Why do I wake at 3am in perimenopause?",
+          url: absoluteUrl("/journal/why-your-skin-changed-at-40"),
+          name: "Why your skin changed at 40, and how to formulate for it.",
         },
       ],
     },
@@ -361,6 +365,47 @@ export function wakeAt3amArticleJsonLd() {
       inLanguage: "en-NZ",
       articleSection: "Sleep and cortisol",
       about: ["perimenopause", "sleep disruption", "cortisol rhythm", "progesterone"],
+    },
+  ]);
+}
+
+export function skinChangedAt40ArticleJsonLd() {
+  const path = "/journal/why-your-skin-changed-at-40";
+  const articleId = `${absoluteUrl(path)}#article`;
+
+  return graph([
+    breadcrumbNode(path, [
+      { name: "Home", path: "/" },
+      { name: "Journal", path: "/journal" },
+      { name: "Why Your Skin Changed at 40", path },
+    ]),
+    webPageNode({
+      path,
+      name: "Why Your Skin Changed at 40",
+      description:
+        "Davina Hearne explains why skin can become drier, more reactive and less predictable through the perimenopausal transition.",
+      image: "/valentia/brand/photo-3.jpg",
+      mainEntity: { "@id": articleId },
+      about: [
+        "skin in transition",
+        "perimenopause skin changes",
+        "skin barrier",
+        "hydration",
+      ],
+    }),
+    {
+      "@type": "Article",
+      "@id": articleId,
+      headline: "Why your skin changed at 40, and how to formulate for it.",
+      description:
+        "A naturopath-written educational article on barrier, hydration and antioxidant support for skin in transition.",
+      image: absoluteUrl("/valentia/brand/photo-3.jpg"),
+      author: { "@id": founderId },
+      publisher: { "@id": organizationId },
+      mainEntityOfPage: { "@id": pageId(path) },
+      inLanguage: "en-NZ",
+      articleSection: "Skin",
+      about: ["perimenopause", "skin barrier", "hydration", "antioxidants"],
     },
   ]);
 }
@@ -480,7 +525,7 @@ export function accountPageJsonLd() {
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
-        "Role-scoped account foundation for retail customers, wholesale buyers, and internal Valentia operators.",
+        "Role-scoped account foundation for retail customers, wholesale buyers and internal Valentia operators.",
       provider: { "@id": organizationId },
       isAccessibleForFree: false,
     },
@@ -641,7 +686,7 @@ function productNode(urlPath: string) {
     size: "30 ml",
     image: productImages,
     description:
-      "A plant-led vitamin C serum formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E.",
+      "A plant-led vitamin C serum formulated with Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil and vitamin E.",
     url: absoluteUrl(urlPath),
     additionalProperty: [
       propertyValue("Key ingredient", "Kakadu plum"),
@@ -649,7 +694,7 @@ function productNode(urlPath: string) {
       propertyValue("Key ingredient", "Hyaluronic acid"),
       propertyValue("Key ingredient", "Rosehip oil"),
       propertyValue("Key ingredient", "Vitamin E"),
-      propertyValue("Formula position", "No synthetic fragrance, parabens, silicones, drying alcohols, or fillers"),
+      propertyValue("Formula position", "No synthetic fragrance, parabens, silicones, drying alcohols or fillers"),
     ],
     offers: [
       {

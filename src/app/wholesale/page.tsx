@@ -10,7 +10,7 @@ import { wholesalePageJsonLd } from "@/lib/seo/schema";
 export const metadata: Metadata = {
   title: "Wholesale",
   description:
-    "Wholesale and practitioner partnerships for Valentia stockists, clinics, pharmacies, and considered retailers.",
+    "Wholesale and practitioner partnerships for Valentia stockists, clinics, pharmacies and considered retailers.",
   alternates: {
     canonical: "/wholesale",
   },

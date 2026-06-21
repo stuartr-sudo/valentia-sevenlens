@@ -43,7 +43,7 @@ export default function ArticlePage() {
             not in your head, and it is not the wine.
           </p>
           <p className="mt-6 text-sm text-forest/55">
-            Davina Hearne. Naturopath. 12 min read. May 2026.
+            Davina Hearne, Naturopath (Diploma, NZ). 12 min read. May 2026.
           </p>
         </header>
 

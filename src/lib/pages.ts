@@ -10,15 +10,15 @@ export const beliefs = [
 export const credentials = [
   {
     title: "Diploma in Naturopathy",
-    copy: "Three-year qualification covering pathology, biochemistry, nutritional and herbal medicine, and clinical practice.",
+    copy: "Three-year qualification covering pathology, biochemistry, nutritional and herbal medicine and clinical practice.",
   },
   {
     title: "Diploma in Nutrition",
-    copy: "Clinical nutritional medicine, food-as-medicine frameworks, and individual nutritional assessment.",
+    copy: "Clinical nutritional medicine, food-as-medicine frameworks and individual nutritional assessment.",
   },
   {
     title: "Diploma in Herbal Medicine",
-    copy: "Materia medica, clinical herbal prescribing, and traditional and modern herbal frameworks.",
+    copy: "Materia medica, clinical herbal prescribing and traditional and modern herbal frameworks.",
   },
   {
     title: "Clinical practice",
@@ -45,36 +45,12 @@ export const journalPosts = [
     featured: true,
   },
   {
-    href: "/journal/why-you-wake-at-3am",
-    category: "Brain and mood",
-    title: "The word-retrieval fog, and why it is not early dementia.",
-    copy: "A clinical note on the hormonal pattern behind sudden word loss.",
-    readTime: "9 min read",
-    image: "/valentia/brand/photo-1.jpg",
-  },
-  {
-    href: "/journal/why-you-wake-at-3am",
-    category: "Dosing and labels",
-    title: "What clinically dosed actually means on a label.",
-    copy: "How to read a dose claim without falling for label dusting.",
-    readTime: "7 min read",
-    image: "/valentia/brand/vitc-lifestyle2.png",
-  },
-  {
-    href: "/journal/why-you-wake-at-3am",
+    href: "/journal/why-your-skin-changed-at-40",
     category: "Skin",
     title: "Why your skin changed at 40, and how to formulate for it.",
-    copy: "Barrier, collagen, cortisol, and the daily basics.",
+    copy: "Barrier, collagen, cortisol and the daily basics.",
     readTime: "8 min read",
     image: "/valentia/brand/photo-3.jpg",
-  },
-  {
-    href: "/topics/why-do-i-wake-at-3am",
-    category: "The body",
-    title: "New-onset anxiety with no history: read your hormones first.",
-    copy: "A programmatic buyer-intent page template for symptom-led search.",
-    readTime: "11 min read",
-    image: "/valentia/brand/vitc-lifestyle1.png",
   },
 ];
 
@@ -92,7 +68,7 @@ export const quizOutcomes = [
   },
   {
     title: "What's driving it",
-    copy: "Your dominant symptom cluster: sleep, brain, mood, body or skin, and the hormonal mechanism behind it.",
+    copy: "Your dominant symptom cluster: sleep, brain, mood, body or skin and the hormonal mechanism behind it.",
   },
   {
     title: "Three things this week",

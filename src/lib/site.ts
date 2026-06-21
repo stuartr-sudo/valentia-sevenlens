@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Valentia",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://valentia.com",
   description:
-    "Naturopath-formulated, plant-led skincare centred on the Valentia Vitamin C Serum, ingredient transparency, and long-term skin balance.",
+    "Naturopath-formulated, plant-led skincare for hormonally changing skin. Start with the five-minute self-audit.",
   founder: "Davina Hearne",
   productName: "Valentia Vitamin C Serum",
   productSlug: "vitamin-c-serum",
@@ -28,7 +28,7 @@ export const benefitCards = [
   },
   {
     title: "Disclosed ingredients",
-    copy: "Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil, and vitamin E are named plainly.",
+    copy: "Kakadu plum, ferulic acid, hyaluronic acid, rosehip oil and vitamin E are named plainly.",
   },
   {
     title: "Plant-led support",
@@ -70,7 +70,7 @@ export const ingredientRows = [
 export const ritualSteps = [
   {
     title: "Recognise",
-    copy: "Start by naming the pattern across skin, sleep, mood, and stress.",
+    copy: "Start by naming the pattern across skin, sleep, mood and stress.",
   },
   {
     title: "Simplify",
@@ -98,12 +98,22 @@ export const faqs = [
   {
     question: "Is it suitable for sensitive skin?",
     answer:
-      "Yes. The formula is free of synthetic fragrance, parabens, and silicones. As with any new product, a short patch test over the first few days is a sensible place to start.",
+      "Yes. The formula is free of synthetic fragrance, parabens and silicones. As with any new product, a short patch test over the first few days is a sensible place to start.",
   },
   {
     question: "How does the monthly delivery work?",
     answer:
-      "Your serum arrives every month at the founding price. You can pause, adjust, or stop it at any time from your account. There are no fees and no commitment.",
+      "Your serum arrives every month at the founding price. You can pause, adjust or stop it at any time from your account. There are no fees and no commitment.",
+  },
+  {
+    question: "Will this change my hormones?",
+    answer:
+      "No. It does not change your hormones, and any skincare that claims to should worry you. Skin can change during the hormonal shifts of perimenopause, drier, more reactive, less predictable. This serum supports that skin through barrier, hydration and antioxidants.",
+  },
+  {
+    question: "How do I cancel or pause?",
+    answer:
+      "In two clicks from your account, online, any time. Skip a month or pause for up to three. No fees, no retention call, no commitment.",
   },
   {
     question: "What is your guarantee?",
@@ -115,14 +125,14 @@ export const faqs = [
 export const platformPillars = [
   {
     title: "Inventory truth",
-    copy: "Products, variants, stock movements, media, and wholesale access share one backend model.",
+    copy: "Products, variants, stock movements, media and wholesale access share one backend model.",
   },
   {
     title: "Customer levels",
-    copy: "Profiles, business memberships, and role-based access separate retail, wholesale, content, ads, SEO, and admin work.",
+    copy: "Profiles, business memberships and role-based access separate retail, wholesale, content, ads, SEO and admin work.",
   },
   {
-    title: "Agent-readable growth",
-    copy: "Programmatic pages, schema records, SEO keywords, media metadata, and ad metrics are stored in structured tables.",
+    title: "Plain growth records",
+    copy: "Programmatic pages, schema records, SEO keywords, media metadata and ad metrics are stored in structured tables.",
   },
 ];
