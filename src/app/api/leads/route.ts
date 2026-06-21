@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendOwnerNotification } from "@/lib/resend";
 import { getSupabaseAdminClient } from "@/lib/supabase/admin";
 
 export const runtime = "nodejs";
@@ -35,10 +36,25 @@ export async function POST(request: Request) {
   };
 
   if (!supabase) {
+    const notification = await sendOwnerNotification({
+      subject: "New Valentia founding-list signup",
+      replyTo: email,
+      text: [
+        "New Valentia founding-list signup",
+        "",
+        `Email: ${email}`,
+        `Name: ${name || "Not provided"}`,
+        `Source: ${source}`,
+        "Mode: local preview",
+      ].join("\n"),
+    });
+
     return NextResponse.json(
       {
         ok: true,
         mode: "local-preview",
+        emailConfigured: notification.configured,
+        emailSent: notification.sent,
         message:
           "You are on the local preview list. Add Supabase env vars to persist this.",
       },
@@ -47,7 +63,7 @@ export async function POST(request: Request) {
   }
 
   const { error } = await supabase
-    .from("waitlist_signups")
+    .from("valentia_waitlist_signups")
     .upsert(payload, { onConflict: "email" });
 
   if (error) {
@@ -57,8 +73,22 @@ export async function POST(request: Request) {
     );
   }
 
+  const notification = await sendOwnerNotification({
+    subject: "New Valentia founding-list signup",
+    replyTo: email,
+    text: [
+      "New Valentia founding-list signup",
+      "",
+      `Email: ${email}`,
+      `Name: ${name || "Not provided"}`,
+      `Source: ${source}`,
+    ].join("\n"),
+  });
+
   return NextResponse.json({
     ok: true,
+    emailConfigured: notification.configured,
+    emailSent: notification.sent,
     message: "You are on the founding list.",
   });
 }

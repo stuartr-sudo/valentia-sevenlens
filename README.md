@@ -30,6 +30,20 @@ Open `http://localhost:3000`.
 
 The site previews without Supabase credentials. Lead submissions return a local-preview response until Supabase env vars are added.
 
+## Resend
+
+The lead capture route at `POST /api/leads` sends owner notifications through Resend when configured. This covers the homepage founding-list form and the quiz/email-capture funnel.
+
+Set these in `.env.local` and Vercel:
+
+```bash
+RESEND_API_KEY=...
+RESEND_FROM_EMAIL="Valentia <onboarding@resend.dev>"
+RESEND_NOTIFICATION_TO=hello@valentia.com.au
+```
+
+Use `onboarding@resend.dev` for early testing, then replace it with a sender on a verified Valentia domain.
+
 ## Supabase
 
 Create or select a Supabase project, then set:
@@ -90,6 +104,9 @@ NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...
 SUPABASE_SERVICE_ROLE_KEY=...
 VALENTIA_OWNER_ACCESS_SIGNING_SECRET=...
+RESEND_API_KEY=...
+RESEND_FROM_EMAIL=...
+RESEND_NOTIFICATION_TO=...
 ```
 
 Build command:
